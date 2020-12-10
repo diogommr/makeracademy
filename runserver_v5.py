@@ -11,7 +11,6 @@ import subprocess # clipboard functionality
 server = Server()
 
 ip = socket.gethostbyname(socket.gethostname())
-ip = "192.168.1.68"
 port = 8000
 # ip = "192.168.8.104"
 
