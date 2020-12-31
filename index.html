@@ -4,62 +4,300 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maker Academy</title>
   <link rel="stylesheet" href="main.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YHC69NMEF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1YHC69NMEF');
+  </script>
 </head>
 <body>
-  <header>
-    <h1>makeracademy</h1>
-    <h3 class="tagline"><p>Develop Your Physical and Digital Making Skills</p>
-      <p>Learn to program, invent electronic devices, make games, and much more!</p>
-    </h3>
-  </header>
-  <main>
+  <div id="app">
+    <nav id="topbar">
+      <div id="topbar-content">
+        <a href="#" id="nav-logo">makeracademy.org</a>
+        <span id="nav-links">
+          <template v-if="language.startsWith('pt')">
+            <a href="#resources">Recursos</a>
+            <a href="#mission">Missão</a>
+            <a href="#services">Serviços</a>
+            <a href="#contact">Contacto</a>
+          </template>
+          <template v-else>
+            <a href="#resources">Resources</a>
+            <a href="#mission">Mission</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </template>
+        </span>
+      </div>
 
-    <section class="ribbon">
-      <div class="section-content">
-        <h2>Comming Soon!</h2>
-        <p>We are working hard to bring you the best maker education, so stay tuned for updates on the platform!</p>
-      </div>      
-    </section>
 
-    <section class="info">
-      <div class="section-content">
-        <div class="section-block">
-          <h2 class="section-title">Choose Your Own Adventure</h2>
-          <p class="section-text">Choose how you want to learn by taking only the classes that are relevant to you.</p>
+    </nav>
+    <header>
+      <div class="header-content">
+        <div class="text">
+          <template v-if="language.startsWith('pt')">
+            <h2>Desenvolve as Tuas Habilidades Criativas</h2>
+            <p class="tagline">Aprende a programar jogos, inventar dispositivos eletrónicos e muito mais!</p>
+          </template>
+          <template v-else>
+            <h2>Develop Your Creative Habilities</h2>
+            <p class="tagline">Learn how to code games, invent electronic devices, and much more!</p>
+          </template>
         </div>
-        <div class="section-block">
-          <div class="image-group-4">
-            <img src="images/button_class.svg" alt="">
-            <img src="images/buzzer_class.svg" alt="">
-            <img src="images/led_class.svg" alt="">
-            <img src="images/resistor_class.svg" alt="">
+      </div>
+
+
+    </header>
+    <main>
+
+      <section id="resources">
+        <div class="section-content">
+          <template v-if="language.startsWith('pt')">
+            <h2 class="section-title">Recursos</h2>
+            <h3 class="section-subtitle">Gasta menos tempo com tecnicalidades e mais com criatividade!</h3>
+          </template>
+          <template v-else>
+            <h2 class="section-title">Resources</h2>
+            <p class="section-subtitle">Spend less time with technicalities and more with creativity!</p>
+          </template>
+          <div>
+            <div class="section-block center-elements padded">
+              <a href="resources/choose_your_devboard" class="resource-block alpha">
+                <img class="resource-block-img" src="images/arduino_uno.svg" alt="">
+                <template v-if="language.startsWith('pt')">
+                  <h3 class="block-title">Escolhe a Tua Placa de Desenvolvimento</h3>
+                </template>
+                <template v-else>
+                  <h3 class="block-title">Choose Your DevBoard</h3>
+                </template>
+              </a>
+            </div>
           </div>
-        </div>
-      </div><!-- end of .section-content -->      
-    </section>
 
-    <section class="info">
-      <div class="section-content">
-        <div class="section-block">
-          <h2 class="section-title">Guided Paths</h2>
-          <p class="section-text">Not sure where to start? We got your back!
-            <br>
-            We’ve curated a selection of classes that form Paths to learn about different themes.</p>
         </div>
-        <div class="section-block">
-          <div class="image-group-4">
-            <img src="images/working_with_motors_path.svg" alt="">
-            <img src="images/dc_motor_class.svg" alt="">
-            <img src="images/servo_motor_class.svg" alt="">
-            <img src="images/stepper_motor_class.svg" alt="">
-          </div>
+      </section>
+
+      <section id="mission">
+        <div class="section-content">
+          <h2 class="section-title">
+            <template v-if="language.startsWith('pt')">A Nossa Missão</template>
+            <template v-else>Our Mission</template>
+          </h2>
+          <h3 class="section-subtitle">
+            <template v-if="language.startsWith('pt')">
+              <span>A makeracademy.org surgiu com um propósito claro:</span>
+              <br>
+              <span class="strong">EMPODERAR OS CIDADÃOS</span>
+            </template>
+            <template v-else>
+              <span>makeracademy.org was born with a clear purpose:</span>
+              <br>
+              <span class="strong">TO EMPOWER YOU</span>
+            </template>
+          </h3>
+          <section class="sub-section col-2">
+            <img class="sub-section-image" src="images/hand_lego.svg" alt="">
+            <div>
+              <h3 class="sub-section-title">
+                <template v-if="language.startsWith('pt')">Todos somos criadores</template>
+                <template v-else>We are all creators</template>
+              </h3>
+              <template v-if="language.startsWith('pt')">
+                <p><strong>Todos temos em nós o potencial de mudar o mundo.</strong></p>
+                <p>Mas por vezes, sentimo-nos perdidos quando não sabemos de que conhecimentos e recursos precisamos.</p>
+                <p>É por isso que a makeracademy.org proporciona um conjunto de ferramentas desenhadas de modo 100% acessível para empoderar qualquer cidadão a tornar-se criador.</p>
+              </template>
+              <template v-else>
+                <p><strong>We all have in ourselves the power to change the world.</strong></p>
+                <p>But sometimes, we feel lost when we don't know the knowledge and resources that we need.</p>
+                <p>That is why makeracademy.org provides a set of tools designed to be 100% accessible to empower any person to become a creator.</p>
+              </template>
+            </div>
+          </section>
+          <section class="sub-section col-2">
+            <img class="sub-section-image" src="images/giving_hands.svg" alt="">
+            <div>
+              <template v-if="language.startsWith('pt')">
+                <h3 class="sub-section-title">Conhecimento Acessível</h3>
+                <p>O Movimento Maker está baseado na partilha aberta de conhecimento.</p>
+                <p>Mas por vezes esse conhecimento está disponível numa linguagem que apenas pessoas com conhecimentos técnicos o podem entender e interpretar.</p>
+                <p>Para reduzir este problema, <strong>todos os nossos conteúdos estão criados por makers para makers</strong> numa linguagem que qualquer pessoa, mesmo sem conhecimentos prévios, possa entender.</p>
+              </template>
+              <template v-else>
+                <h3 class="sub-section-title">Accessible Knowledge</h3>
+                <p>The Maker Movement is based on the sharing of knowledge.</p>
+                <p>But sometimes that knowledge is available in a language that only people with technical knowledge can understand.</p>
+                <p>To reduce that problem, <strong>all our resources are created by makers for makers</strong> in a language that any person, even without previous knowledge on the subject, can understand.</p>
+              </template>
+            </div>
+          </section>
+          <section class="sub-section col-2">
+            <img class="sub-section-image" src="images/3d_printer.png" alt="3d printer">
+            <div>
+              <template v-if="language.startsWith('pt')">
+                <h3 class="sub-section-title">Democratização do Making</h3>
+                <p>Pela primeira vez na história da humanidade, as tecnologias utilizadas nas indústrias estão <strong>disponíveis a um vasto público</strong>.</p>
+                <p>Este público é maioritáriamente composto por makers e hackers que tiram partido de estas ferramentas para a <strong>materialização das suas ideias e na adquisição de novos conhecimentos e habilidades</strong>.</p>
+                <p>Tecnologias como a Impressão 3D evoluiram para se tornarem acessíveis e <strong>permitirem a qualquer pessoa fabricar objetos impossíveis com recurso a outras técnicas de fabricação</strong>.</p>
+                <p>Espaços Maker e Hackerspaces surgem para albergar estas novas ferramentas e muitas outras, empoderando o cidadão comum a <strong>passar de ser consumidor a ser um inventor e criador</strong>.</p>
+                <p>Na makeracademy.org contribuimos para <strong>tornar estas tecnologias e ferramentas ainda mais acessíveis adaptando-as a um formato digital</strong> online e contribuindo na <strong>criação de novos polos de conhecimento e criação</strong>.</p>
+              </template>
+              <template v-else>
+                <h3 class="sub-section-title">Democratization of Making</h3>
+                <p>For the first time in history, the technologies used in the industries are available to a wide audience.</p>
+                <p>This audience is composed mainly of makers and hackers that use these tools to <strong>materialize their ideas and acquire new knowledge and abilities</strong>.</p>
+                <p>Technologies like 3D Printing evolved to become accessible and <strong>allow anyone to fabricate objects impossible to create using other fabrication techniques</strong>.</p>
+                <p>Makerspaces and Hackerspaces were born to host these tools and many others, empowering the common citizen to <strong>go from consumer to creator and inventor</strong>.</p>
+                <p>At makeracademy.org we contribute to <strong>making these technologies and tools even more accessible by adapting them to a digital format</strong> and <strong>contributing to the  creation of new incubators of knowledge and creation</strong>.</p>
+              </template>
+            </div>
+          </section>
+          <img class="bg-image" src="images/closed_hands.svg" alt="">
         </div>
-      </div><!-- end of .section-content -->
-    </section>
+      </section>
 
-  </main>
-  <footer>
+      <section id="services">
+        <div class="section-content">
+          <h2 class="section-title">
+            <template v-if="language.startsWith('pt')">O Que Podemos Fazer Por Ti?</template>
+            <template v-else>What Can We Do For You?</template>
+          </h2>
 
-  </footer>
+          <section class="sub-section col-2">
+          <img class="sub-section-image" src="images/electronics_02.jpg" alt="">
+            <div class="">
+              <template v-if="language.startsWith('pt')">
+                <h3 class="sub-section-title">Para Instituições</h3>
+                <p><strong>Que tal uma aula diferente?</strong></p>
+                <p>Dinamizamos workshops nas áreas de STEAM (Ciências, Tecnologias, Engenharias, Artes e Matemática) para tornar a educação divertida e lúdica.</p>
+              </template>
+              <template v-else>
+                <h3 class="sub-section-title">For Institutions</h3>
+                <p><strong>How about a different class?</strong></p>
+                <p>We organize workshops in the fields of STEAM (Sciences, Technologies, Engineering, Arts, and Math).</p>
+              </template>
+            </div>
+          </section>
+
+          <section class="sub-section col-2">
+            <img class="sub-section-image" src="images/workshop_01.jpg" alt="">
+            <div class="">
+              <template v-if="language.startsWith('pt')">
+                <h3 class="sub-section-title">Para Crianças e Jovens</h3>
+                <p><strong>Vem assistir aos nossos workshops e aprende novas habilidades maker que te permitirão materializar qualquer ideia!</strong></p>
+                <p>Dinamizamos eventos e ações de formação especialmente pensadas para o público mais jovem com a inclusão de jogos e recursos que fundamentam bases sólidas para o crescimento do interesse e das habilidades criativas nas áreas maker.</p>
+              </template>
+              <template v-else>
+                <h3 class="sub-section-title">For Children and Teenagers</h3>
+                <p><strong>Participate in one of our workshops and learn new skills that will allow you to materialize your ideas!</strong></p>
+                <p>We promote events and training actions specially designed for the younger audience, with the inclusion of games and resources that provide solid bases for the growth of interest and creative skills in the maker areas.</p>
+              </template>
+            </div>
+          </section>
+
+          <section class="sub-section col-2">
+            <img class="sub-section-image" src="images/electronics_03.jpg" alt="">
+            <div class="">
+              <template v-if="language.startsWith('pt')">
+                <h3 class="sub-section-title">Para Adultos</h3>
+                <p><strong>Eleve a sua produtividade desenvolvendo ferramentas personalizadas!</strong></p>
+                <p>Dinamizamos ações de formação focadas em temáticas como o uso das novas tecnologias na criação de ferramentas que facilitam grandemente o trabalho laboral.</p>
+                <p><strong>Atualize as suas competências!</strong></p>
+                <p>Venha adquirir novos conhecimentos nas áreas tecnológicas.</p>
+                <p>Desenvolvemos formações de adquisição e aprofundamento de conhecimento de modo a trazer a literacia digital para todos.</p>
+              </template>
+              <template v-else>
+                <h3 class="sub-section-title">For Adults</h3>
+                <p><strong>Elevate your productivity by developing custom tools!</strong></p>
+                <p>We organize training actions focused on themes such as the use of new technologies in the creation of tools that greatly facilitate work.</p>
+                <p><strong>Update your competencies!</strong></p>
+                <p>Come adquire new knowledge in the technological fields.</p>
+                <p>We develop training for acquiring and deepen knowledge to bring digital literacy to everyone.</p>
+              </template>
+            </div>
+          </section>
+
+          <section class="sub-section col-2">
+            <img class="sub-section-image" src="images/electronics_01.jpg" alt="">
+            <div class="">
+              <template v-if="language.startsWith('pt')">
+                <h3 class="sub-section-title">Para o Público em Geral</h3>
+                <p><strong>Uma Nova Descoberta!</strong></p>
+                <p>Alimentados pela comunidade, os recursos da makeracademy.org visam proporcionar as ferramentas e conhecimento necessário para permitir a todos realizar os seus projetos criativos.</p>
+                <p>Disponibilizamos recursos e aulas em âmbitos como: desenvolvimento de páginas web, criação de jogos, literacia digital (como usar e tirar mais partido do seu telefone e computador), desenvolvimento de aplicações móveis, robótica, eletrónica e pequenas invenções, domótica e automação, entre outros!</p>
+              </template>
+              <template v-else>
+                <h3 class="sub-section-title">For the General Public</h3>
+                <p><strong>A New Discovery!</strong></p>
+                <p>Fed by the community, makeracademy.org's resources aim to provide the necessary tools and knowledge to allow everyone to materialize their ideas.</p>
+                <p>We provide resources and training in topics such as:
+                  <ul>
+                    <li>Webpage Creation</li>
+                    <li>Game Development</li>
+                    <li>Digital Literacy</li>
+                    <li>Mobile App Development</li>
+                    <li>Robotics</li>
+                    <li>Electronics and small inventions</li>
+                    <li>Domotics and Automation</li>
+                    <li>And many others!</li>
+                  </ul>
+                </p>
+              </template>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-content">
+          <h2 class="section-title">
+            <template v-if="language.startsWith('pt')">Contacta-nos</template>
+            <template v-else>Get In Touch</template>
+          </h2>
+
+          <section class="sub-section col-2">
+            <div>
+              <template v-if="language.startsWith('pt')">
+                <h3>Sobre Nós</h3>
+                <p>A makeracademy.org foi fundada e é atualmente mantida e dinamizada por Diogo Ribeiro.</p>
+                <p>O Diogo é designer e maker e promotor e divulgador da cultura e do movimento maker.</p>
+                <p>Podes saber mais sobre ele no seu <a href="http://diogomakes.com" target="_blank">website pessoal</a>.</p>
+                <p>Estamos sediados em Elvas, Portugal e esperamos vir a ter um espaço maker físico brevemente.</p>
+              </template>
+              <template v-else>
+                <h3>About Us</h3>
+                <p>makeracademy.org was founded and it is currently mantained by Diogo Ribeiro.</p>
+                <p>Diogo is a Designer and Maker and a Maker Movement and Culture Evangelist.</p>
+                <p>You can find more about him in his <a href="http://diogomakes.com" target="_blank">personal website</a>.</p>
+                <p>We are headquartered in Elvas, Portugal and we hope to have a physical makerspace soon.</p>
+              </template>
+            </div>
+            <div>
+              <template v-if="language.startsWith('pt')">
+                <h3>Podes contactar-nos através do seguinte email:</h3>
+                <p>info@makeracademy.org</p>
+              </template>
+              <template v-else>
+                <h3>You can get in touch by emailing us at:</h3>
+                <p>info@makeracademy.org</p>
+              </template>
+            </div>
+          </section>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="app.js" charset="utf-8"></script>
 </body>
 </html>

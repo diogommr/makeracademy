@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your DevBoard</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YHC69NMEF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1YHC69NMEF');
+  </script>
+</head>
+<body>
+
+  <div id="app" :class="computedModalOpenClass">
+
+    <div class="modal" v-if="modalOpen">
+      <button id="close-modal-btn" @click="closeModal"><span class="mdi mdi-close"></span></button>
+      <div class="modal-content-cont">
+        <div class="gallery-cont-wrapper">
+          <button v-if="modalBoard.imageGallery" @click="galleryPrev($event)" class="gallery-prev">
+            <span class="mdi mdi-arrow-left"></span>
+          </button>
+          <button v-if="modalBoard.imageGallery" @click="galleryNext($event)" class="gallery-next">
+            <span class="mdi mdi-arrow-right"></span>
+          </button>
+          <div class="gallery-cont">
+            <img class="gallery-img" :src="modalBoard.coverImage" alt="">
+            <img v-for="image in modalBoard.imageGallery" class="gallery-img" :src="image" alt="">
+
+          </div>
+        </div>
+        <h2>{{ modalBoard.name }}</h2>
+        <section class="modal-specs">
+          <section>
+            <h3>Performance</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td>CPU</td><td>{{ modalBoard.specs.cpu }}</td>
+                </tr>
+                <tr>
+                  <td>Clock Speed</td><td>{{ modalBoard.specs.clockSpeed }}</td>
+                </tr>
+                <tr>
+                  <td>Flash Memory</td><td>{{ modalBoard.specs.flashMemory }}</td>
+                </tr>
+                <tr>
+                  <td>SRAM</td><td>{{ modalBoard.specs.sram }}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h3>Power</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Operating Voltage</td><td>{{ modalBoard.specs.operatingVoltage }}V</td>
+                </tr>
+                <tr v-if="modalBoard.specs.inputVoltage">
+                  <td>Input Voltage</td><td>{{ modalBoard.specs.inputVoltage.min }} - {{ modalBoard.specs.inputVoltage.max }}V</td>
+                </tr>
+                <tr v-if="modalBoard.specs.io.ioPinCurrent">
+                  <td>Current per Pin</td><td>{{ modalBoard.specs.io.ioPinCurrent }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h3>Communications</h3>
+            <table>
+              <tbody>
+                <tr v-if="modalBoard.specs.communications.wifi">
+                  <td>Wi-Fi</td><td>{{ modalBoard.specs.communications.wifi }}</td>
+                </tr>
+                <tr v-if="modalBoard.specs.communications.bluetooth">
+                  <td>Bluetooth</td><td>{{ modalBoard.specs.communications.bluetooth }}</td>
+                </tr>
+                <tr v-if="modalBoard.specs.communications.lora">
+                  <td>LoRa</td><td>{{ modalBoard.specs.communications.lora }}</td>
+                </tr>
+                <tr>
+                  <td>I2Cs</td>
+                  <td v-if="modalBoard.specs.communications.i2c">
+                    {{ modalBoard.specs.communications.i2c }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+                <tr>
+                  <td>SPIs</td>
+                  <td v-if="modalBoard.specs.communications.spi">
+                    {{ modalBoard.specs.communications.spi }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+                <tr>
+                  <td>UARTs</td>
+                  <td v-if="modalBoard.specs.communications.uart">
+                    {{ modalBoard.specs.communications.uart }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h3>I/O</h3>
+            <table>
+              <tbody>
+                <tr v-if="modalBoard.specs.io.gpioPins">
+                  <td>GPIO Pins</td><td>{{ modalBoard.specs.io.gpioPins }}</td>
+                </tr>
+                <tr>
+                  <td>Digital I/O Pins</td>
+                  <td v-if="modalBoard.specs.io.digitalPins">
+                    {{ modalBoard.specs.io.digitalPins }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+                <tr>
+                  <td>PWM Digital I/O Pins</td>
+                  <td v-if="modalBoard.specs.io.pwmPins">
+                    {{ modalBoard.specs.io.pwmPins }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+                <tr v-if="modalBoard.specs.io.analogPins">
+                  <td>Analog Input Pins</td><td>{{ modalBoard.specs.io.analogPins }}</td>
+                </tr>
+                <tr>
+                  <td>DACs</td>
+                  <td v-if="modalBoard.specs.io.dac">
+                    {{ modalBoard.specs.io.dac }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+                <tr>
+                  <td>Interrupt Pins</td>
+                  <td v-if="modalBoard.specs.io.interrupts">
+                    {{ modalBoard.specs.io.interrupts }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+                <tr>
+                  <td>USB Port</td>
+                  <td v-if="modalBoard.specs.io.usb">
+                    {{ modalBoard.specs.io.usb }}
+                  </td>
+                  <td v-else>-</td>
+                </tr>
+                <tr v-if="modalBoard.specs.io.usbToSerialConverter">
+                  <td>USB to Serial Converter</td>
+                  <td>
+                    {{ modalBoard.specs.io.usbToSerialConverter }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section v-if="modalBoard.specs.features">
+            <h3>Features</h3>
+            <ul>
+              <li v-if="modalBoard.specs.features.hid"><strong>HID</strong> - Can simulate a peripheral (keyboard, mouse, MIDI device, ...)</li>
+              <li v-if="modalBoard.specs.features.builtinLed"><strong>Built-in Programmable LED</strong> via pin {{ modalBoard.specs.features.builtinLed }}</li>
+              <li v-if="modalBoard.specs.features.builtinRGBLed"><strong>Built-in Programmable RGB LED</strong> via pin {{ modalBoard.specs.features.builtinRGBLed }}</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Programmable Via</h3>
+            <ul>
+              <li v-if="modalBoard.specs.software.arduino">Arduino IDE</li>
+              <li v-if="modalBoard.specs.software.python">{{ modalBoard.specs.software.python }}</li>
+              <li v-if="modalBoard.specs.software.javascript">Javascript</li>
+              <li v-if="modalBoard.specs.software.lua">Lua</li>
+              <li v-if="modalBoard.specs.software.blockLanguages">
+                <template v-for="blockLanguage in modalBoard.specs.software.blockLanguages">
+                  {{ blockLanguage }}
+                </template>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section v-if="modalBoard.pinout" class="modal-pinout">
+          <h3>Pinout</h3>
+          <div class="modal-pinout-gallery">
+            <img v-for="image in modalBoard.pinout" :src="image" :alt="[modalBoard.name, 'pinout']">
+          </div>
+
+        </section>
+
+        <!-- <p v-for="(value, spec) in modalBoard.specs"><strong>{{ spec }}:</strong> {{ value }}</p> -->
+      </div>
+    </div>
+
+    <template>
+      <!-- Desktop -->
+      <nav v-if="deviceWidth > 600">
+        <a href="../../">makeracademy.org</a> &gt; <a href="../../#resources">Resources</a> &gt;
+        <strong>Choose Your DevBoard</strong>
+      </nav>
+      <!-- Mobile -->
+      <nav v-else>
+        <a href="../../">makeracademy.org</a>
+        <button v-if="deviceWidth < 600" id="sidebar-toggle-btn" @click="toggleSidebar">
+          <span v-if="!sidebarVisible" class="mdi mdi-filter"></span>
+          <span v-if="sidebarVisible" class="mdi mdi-close"></span>
+        </button>
+      </nav>
+    </template>
+
+
+    <div class="topbar">
+      <h4 class="topbar-section-title">View Options:</h4>
+      <label class="checkbox-label" for="view-scale-check">To Scale
+        <input class="checkbox" type="checkbox" name="scale" id="view-scale-check" v-model="toScale">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox-label" for="view-details-check">Show Details
+        <input class="checkbox" type="checkbox" name="scale" id="view-details-check" v-model="showDetails">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <aside class="sidebar" :class="{ hidden:!sidebarVisible }">
+
+      <!-- Vue -->
+      <section v-for="filter in boardFilters">
+        <h3 class="sidebar-section-title">{{ filter.title }}</h3>
+        <label class="checkbox-label" v-for="option in filter.options"
+          :for="option.name | ifenate">{{ option.name }}
+          <input class="checkbox" type="checkbox" name="" :id="option.name | ifenate" @click="filterBoards(filter.id, option.id, $event)">
+          <span class="checkmark"></span>
+        </label>
+      </section>
+
+    </aside>
+
+    <main>
+      <!-- Vue -->
+      <div v-for="board in boards" class="board-cont" :class="{ expanded: showDetails, visible: board.visible }" @click="openModal(board, $event)">
+        <div class="board-cont-img-cont">
+          <img class="board-cont-img"
+            :src="board.coverImage" :alt="board.name" :style="toScale ? ('width: ' +
+            board.specs.footprint.dimensions[0] + '%') : ''">
+        </div>
+        <h2 class="board-cont-name">{{ board.name }}</h2>
+        <div class="board-cont-info">
+          <p><strong>CPU</strong><br>{{ board.specs.cpu }}</p>
+          <p><strong>Clock Speed</strong><br>{{ board.specs.clockSpeed }}</p>
+          <p><strong>Flash Memory</strong><br>{{ board.specs.flashMemory }}</p>
+          <p><strong>Digital Pins</strong><br>{{ board.specs.io.digitalPins }}</p>
+          <p><strong>Analog Input Pins</strong><br>{{ board.specs.io.analogPins }}</p>
+          <p><strong>PWM Pins</strong><br>{{ board.specs.io.pwmPins }}</p>
+          <p><strong>Interrupts</strong><br>{{ board.specs.io.interrupts }}</p>
+        </div>
+        <button class="board-cont-more-info-btn">+</button>
+      </div>
+
+    </main>
+  </div><!-- end of #app -->
+
+  <script src="boards.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
