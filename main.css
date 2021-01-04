@@ -5,9 +5,12 @@
   --page-width: 1100px;
   --standard-border-radius: 20px;
   --dark-grey-color: #222;
-  --blue-color: lightblue;
-  --pink-color: #FFCCBF;
-  --yellow-color: #F8CC49;
+  /* --blue-color: lightblue; */
+  --blue-color: #BBDDDE;
+  /* --pink-color: #FFCCBF; */
+  --pink-color: #F5B994;
+  /* --yellow-color: #F8CC49; */
+  --yellow-color: #F7D08D;
   --red-color: #fc5426;
 }
 
@@ -209,7 +212,7 @@ header {
   padding: 80px 20px 100px;
   width: calc(100% - 40px);
   min-height: 50vh;
-  background-color: #FBCB4F;
+  background-color: var(--yellow-color);
   background-image: url("images/header_bg.jpg");
   background-position: center;
   background-size: cover;
@@ -268,6 +271,66 @@ header h2 {
 }
 
 
+/* ---------- Newsletter ---------- */
+#newsletter {
+  background-color: var(--pink-color);
+}
+
+#newsletter .sub-section {
+  margin: 0;
+}
+
+#newsletter-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#newsletter-image img {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  object-fit: contain;
+  object-position: center center;
+  padding: 30px;
+}
+
+/* ----- */
+
+.sib-form {
+  padding: 0;
+}
+
+#sib-container {
+  padding: 0;
+  background: transparent;
+}
+
+.sib-input,
+.sib-optin,
+.sib-form__declaration,
+.sib-form-block {
+  padding: 0;
+}
+
+.sib-form__declaration {
+  margin: 20px 0;
+}
+
+.sib-form-block__button {
+  color: white;
+  letter-spacing: 0.03em;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.sib-form-block__button:hover {
+  color: white;
+  background-color: #687484;
+}
+
 
 /* ---------- Resources ---------- */
 
@@ -277,7 +340,7 @@ section#resources {
   flex-direction: column;
   justify-content: center;
   background-color: var(--blue-color);
-  background-image: url(images/resources_bg.jpg);
+  /* background-image: url(images/resources_bg.jpg); */
   background-position: bottom;
   background-size: cover;
 }
@@ -285,14 +348,13 @@ section#resources {
 .resource-block {
   width: 200px;
   height: 250px;
-  border: 2px solid #333;
+  border: 2px solid #222;
   /* border-radius: var(--standard-border-radius); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
   text-decoration: none;
-  color: #333;
   background: rgba(255, 255, 255, 0.5);
   position: relative;
 }
