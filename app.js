@@ -26,6 +26,7 @@ const HomePage = {
             <p>Maker Academy</p>
           </h1>
         </header>
+        <!-- Resources -->
         <section class="col-2">
           <!-- LEFT -->
           <div class="section-content white-bg border">
@@ -41,6 +42,20 @@ const HomePage = {
               <h3 class="resource-title">DevBoards</h3>
             </a>
           </div>
+        </section>
+        <!-- Learning -->
+        <section id="school-section" class="border">
+          <div class="section-content border">
+            <div class="border">
+              <p class="section-title uppercase">Comming Soon</p>
+            </div>
+            <div class="border">
+              <p>An entire learning section dedicated to teaching Maker Habilities!</p>
+            </div>
+          </div>
+        </section>
+        <!-- Who, What Why -->
+        <section>
         </section>
       </div>
     </div>

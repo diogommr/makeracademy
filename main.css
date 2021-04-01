@@ -5,6 +5,7 @@
   --pastel-white: #F9F9F9;
   --pastel-blue: #9BD9DB;
   --pastel-yellow: #FFCC66;
+  --pastel-red: #EAB292;
 }
 
 html, body {
@@ -77,6 +78,8 @@ h1, h2, h3, p {
 #home-page {
   height: 100%;
   background: url(images/resistor_pattern_white_on_blue.png);
+  background-size: 60px;
+  padding: 20px 0 60px;
 }
 
 /* ===================== HEADER ===================== */
@@ -156,6 +159,37 @@ h1, h2, h3, p {
 
 #home-page .resource-title {
   font-size: 23px;
+}
+
+
+/* ===================== LEARNING ===================== */
+#home-page #school-section {
+  padding: 40px;
+  background: var(--pastel-red);
+}
+
+#home-page #school-section .section-content {
+  width: 70%;
+  padding: 0;
+  margin: auto;
+}
+
+#home-page #school-section .section-content div:first-child {
+  background: url(images/cross_pattern_transparent.png), #FFCC66;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#home-page #school-section .section-title {
+  font-size: 22px;
+}
+
+#home-page #school-section .section-content div:last-child {
+  background: var(--pastel-white);
+  text-align: center;
+  font-size: 26px;
+  padding: 20px;
 }
 
 
