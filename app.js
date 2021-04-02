@@ -75,6 +75,42 @@ const HomePage = {
             <img src="images/profile_picture.png">
           </div>
         </section>
+        <!-- Roadmap -->
+        <section id="roadmap-section" class="border">
+          <div class="section-content border">
+            <div class="border">
+              <p class="section-title uppercase">Roadmap</p>
+            </div>
+            <div class="border">
+              <!-- Stop -->
+              <div class="roadmap-stop">
+                <div class="roadmap-stop-image">
+                  DOM
+                </div>
+                <p>Add Resource</p>
+                <p>DOM Reference</p>
+              </div>
+              <img src="images/arrow.svg" class="roadmap-arrow">
+              <!-- Stop -->
+              <div class="roadmap-stop">
+                <div class="roadmap-stop-image">
+                  <img src="images/cards.svg">
+                </div>
+                <p>Add Resource</p>
+                <p>Printable Handouts</p>
+              </div>
+              <img src="images/arrow.svg" class="roadmap-arrow">
+              <!-- Stop -->
+              <div class="roadmap-stop">
+                <div class="roadmap-stop-image">
+                  { }
+                </div>
+                <p>Add Resource</p>
+                <p>Languages Reference</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   `

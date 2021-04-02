@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300,400;600;700&display=swap');
 
 :root {
   --black: #0A0A0A;
@@ -212,6 +212,81 @@ h1, h2, h3, p {
   align-items: center;
 }
 
+
+/* ===================== ROADMAP ===================== */
+#home-page #roadmap-section {
+  padding: 40px;
+  background: var(--pastel-red);
+}
+
+#home-page #roadmap-section .section-content {
+  /* width: 70%; */
+  padding: 0;
+  margin: auto;
+}
+
+#home-page #roadmap-section .section-content > div:first-child {
+  background: url(images/cross_pattern_transparent.png), #FFCC66;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#home-page #roadmap-section .section-title {
+  font-size: 22px;
+}
+
+#home-page #roadmap-section .section-content > div:last-child {
+  background: var(--pastel-white);
+  padding: 20px;
+}
+
+#home-page #roadmap-section .section-content > div:last-of-type {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+#home-page #roadmap-section .roadmap-arrow {
+  width: 100px;
+  margin: -70px 20px 0;
+}
+
+#home-page #roadmap-section .roadmap-stop {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home-page #roadmap-section .roadmap-stop .roadmap-stop-image {
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  background: white;
+}
+
+#home-page #roadmap-section .roadmap-stop:nth-child(3) .roadmap-stop-image img {
+  width: 60%;
+}
+
+#home-page #roadmap-section .roadmap-stop p:first-of-type {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#home-page #roadmap-section .roadmap-stop p:last-of-type {
+  font-size: 20px;
+  text-align: center;
+}
 
 /* ================= RESOURCES PAGE ================= */
 .resource-page {
