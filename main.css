@@ -60,7 +60,11 @@ h1, h2, h3, p {
   font-size: 30px;
   font-weight: bold;
   line-height: 1.4em;
-  font-size: bold;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 1.4em;
 }
 
 .text-block p {
@@ -206,6 +210,7 @@ h1, h2, h3, p {
 
 /* ===================== ABOUT ===================== */
 
+
 #home-page #about-image {
   display: flex;
   justify-content: center;
@@ -216,7 +221,7 @@ h1, h2, h3, p {
 /* ===================== ROADMAP ===================== */
 #home-page #roadmap-section {
   padding: 40px;
-  background: var(--pastel-red);
+  background: var(--pastel-blue);
 }
 
 #home-page #roadmap-section .section-content {
@@ -243,8 +248,18 @@ h1, h2, h3, p {
 
 #home-page #roadmap-section .section-content > div:last-of-type {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 40px;
+}
+
+#home-page #roadmap-section .section-content>div:last-of-type > p {
+  margin-bottom: 40px;
+}
+
+#home-page #roadmap-section .roadmap {
+  display: flex;
+  justify-content: center;
 }
 
 #home-page #roadmap-section .roadmap-arrow {

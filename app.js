@@ -55,7 +55,7 @@ const HomePage = {
           </div>
         </section>
         <!-- Who, What Why -->
-        <section class="col-2">
+        <section id="about-section" class="col-2">
           <!-- LEFT -->
           <div class="section-content pink-bg border">
             <p id="about-text" class="section-title uppercase">
@@ -82,32 +82,36 @@ const HomePage = {
               <p class="section-title uppercase">Roadmap</p>
             </div>
             <div class="border">
-              <!-- Stop -->
-              <div class="roadmap-stop">
-                <div class="roadmap-stop-image">
-                  DOM
+              <p class="section-subtitle">This are my plans for the near future</p>
+              <div class="roadmap">
+                <!-- Stop -->
+                <div class="roadmap-stop">
+                  <div class="roadmap-stop-image">
+                    DOM
+                  </div>
+                  <p>Add Resource</p>
+                  <p>DOM Reference</p>
                 </div>
-                <p>Add Resource</p>
-                <p>DOM Reference</p>
-              </div>
-              <img src="images/arrow.svg" class="roadmap-arrow">
-              <!-- Stop -->
-              <div class="roadmap-stop">
-                <div class="roadmap-stop-image">
-                  <img src="images/cards.svg">
+                <img src="images/arrow.svg" class="roadmap-arrow">
+                <!-- Stop -->
+                <div class="roadmap-stop">
+                  <div class="roadmap-stop-image">
+                    <img src="images/cards.svg">
+                  </div>
+                  <p>Add Resource</p>
+                  <p>Printable Handouts</p>
                 </div>
-                <p>Add Resource</p>
-                <p>Printable Handouts</p>
-              </div>
-              <img src="images/arrow.svg" class="roadmap-arrow">
-              <!-- Stop -->
-              <div class="roadmap-stop">
-                <div class="roadmap-stop-image">
-                  { }
+                <img src="images/arrow.svg" class="roadmap-arrow">
+                <!-- Stop -->
+                <div class="roadmap-stop">
+                  <div class="roadmap-stop-image">
+                    { }
+                  </div>
+                  <p>Add Resource</p>
+                  <p>Languages Reference</p>
                 </div>
-                <p>Add Resource</p>
-                <p>Languages Reference</p>
               </div>
+              
             </div>
           </div>
         </section>
