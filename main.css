@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300,400;600;700&display=swap');
 
 :root {
+  /* Colors */
   --black: #0A0A0A;
   --pastel-white: #F9F9F9;
   --pastel-blue: #9BD9DB;
   --pastel-yellow: #FFCC66;
   --pastel-red: #EAB292;
   --pastel-pink: #F6D7D4;
+
+  /* Page */
+  --page-width: 1100px;
 }
 
 html, body {
@@ -28,6 +32,11 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+a {
+  /* text-decoration: none; */
+  text-decoration-color: var(--black);
+}
+
 .uppercase {
   text-transform: uppercase;  
 }
@@ -38,28 +47,25 @@ h1, h2, h3, p {
 }
 
 .page-center {
-  width: 1100px;
+  width: calc(100% - 20px);
   margin: auto;
 }
 
-.col-1 {
-  width: 100%;
+@media only screen and (min-width: 1140px) {
+  .page-center {
+    width: 1100px;
+    margin: auto;
+  }
 }
 
-.col-2 {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
+.col-1,
+.col-2,
 .col-3 {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .section-content {
-  padding: 40px;
+  padding: 20px;
 }
 
 .section-title {
@@ -77,6 +83,30 @@ h1, h2, h3, p {
   font-size: 20px;
   margin-top: 10px;
 }
+
+@media only screen and (min-width: 1140px) {
+  .col-1 {
+    width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section-content {
+    padding: 40px;
+  }
+}
+
+
 
 .border {
   border: 1px solid var(--black);
@@ -113,7 +143,7 @@ h1, h2, h3, p {
 
 #home-page header {
   width: 100%;
-  height: 360px;
+  height: 50vh;
   background: url(images/cross_pattern_transparent.png), #FFCC66;
   /* background-size: 25px; */
   display: flex;
@@ -127,28 +157,53 @@ h1, h2, h3, p {
 }
 
 #home-page header h1 p:first-child {
-  font-size: 24px;
+  font-size: 22px;
   text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
 }
 
 #home-page header h1 p:last-child {
-  font-size: 70px;
-  text-shadow: -4px 4px rgba(0,0,0,0.25);
+  font-size: 48px;
+  text-shadow: -3px 3px rgba(0,0,0,0.25);
 }
 
+@media only screen and (min-width: 1140px) {
+  #home-page header {
+    height: 360px;
+  }
 
+  #home-page header h1 p:first-child {
+    font-size: 24px;
+    text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  #home-page header h1 p:last-child {
+    font-size: 70px;
+    text-shadow: -4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
 
 
 /* ===================== RESOURCES ===================== */
 
 #home-page #resources-text::after {
-  content: '☞';
+  content: '☟';
   font-size: 2em;
-  /* line-height: 0.2em; */
-  margin-left: -3px;
-  /* margin-top: 40px; */
   display: block;
   font-weight: normal;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1140px) {
+  #home-page #resources-text::after {
+    content: '☞';
+    font-size: 2em;
+    margin-left: -3px;
+    display: block;
+    font-weight: normal;
+    margin-top: 20px;
+  }
 }
 
 #home-page #resources {
@@ -193,12 +248,11 @@ h1, h2, h3, p {
 
 /* ===================== LEARNING ===================== */
 #home-page #school-section {
-  padding: 40px;
+  padding: 20px;
   background: var(--pastel-red);
 }
 
 #home-page #school-section .section-content {
-  width: 70%;
   padding: 0;
   margin: auto;
 }
@@ -221,6 +275,16 @@ h1, h2, h3, p {
   padding: 20px;
 }
 
+@media only screen and (min-width: 1140px) {
+  #home-page #school-section {
+    padding: 40px;
+  }
+
+  #home-page #school-section .section-content {
+    width: 70%;
+  }
+}
+
 
 /* ===================== ABOUT ===================== */
 
@@ -239,12 +303,11 @@ h1, h2, h3, p {
 
 /* ===================== ROADMAP ===================== */
 #home-page #roadmap-section {
-  padding: 40px;
+  padding: 20px;
   background: var(--pastel-blue);
 }
 
 #home-page #roadmap-section .section-content {
-  /* width: 70%; */
   padding: 0;
   margin: auto;
 }
@@ -269,7 +332,7 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
 }
 
 #home-page #roadmap-section .section-content>div:last-of-type > p {
@@ -279,11 +342,13 @@ h1, h2, h3, p {
 #home-page #roadmap-section .roadmap {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #home-page #roadmap-section .roadmap-arrow {
   width: 100px;
-  margin: -70px 20px 0;
+  margin: 50px;
+  transform: rotate(90deg);
 }
 
 #home-page #roadmap-section .roadmap-stop {
@@ -303,7 +368,7 @@ h1, h2, h3, p {
   justify-content: center;
   align-items: center;
   font-size: 32px;
-  background: white;
+  background: var(--pastel-red);
 }
 
 #home-page #roadmap-section .roadmap-stop:nth-child(3) .roadmap-stop-image img {
@@ -321,6 +386,24 @@ h1, h2, h3, p {
   font-size: 20px;
   text-align: center;
 }
+
+@media only screen and (min-width: 1140px) {
+  #home-page #roadmap-section {
+    padding: 40px;
+    background: var(--pastel-blue);
+  }
+
+  #home-page #roadmap-section .roadmap-arrow {
+    width: 100px;
+    margin: -70px 20px 0;
+    transform: rotate(0deg);
+  }
+
+  #home-page #roadmap-section .section-content>div:last-of-type {
+    padding: 40px;
+  }
+}
+
 
 /* ================= RESOURCES PAGE ================= */
 .resource-page {

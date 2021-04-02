@@ -50,7 +50,7 @@ const HomePage = {
               <p class="section-title uppercase">Comming Soon</p>
             </div>
             <div class="border">
-              <p>An entire learning section dedicated to teaching Maker Habilities!</p>
+              <p>An entire learning section dedicated to teaching Maker Abilities!</p>
             </div>
           </div>
         </section>
