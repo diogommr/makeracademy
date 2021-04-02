@@ -89,10 +89,17 @@ h1, h2, h3, p {
   background: var(--pastel-pink);
 }
 
+.new {
+  width: 80px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
 #home-page {
   height: 100%;
   background: url(images/resistor_pattern_white_on_blue.png);
-  background-size: 60px;
+  background-size: 50px;
   padding: 20px 0 60px;
 }
 
@@ -156,6 +163,7 @@ h1, h2, h3, p {
   flex-direction: column;
   cursor: pointer;
   transition: 0.1s;
+  position: relative;
 }
 
 #home-page .resource:hover {
