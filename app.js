@@ -30,8 +30,7 @@ const HomePage = {
         <section class="col-2">
           <!-- LEFT -->
           <div class="section-content white-bg border">
-            <p id="resources-text" class="section-title uppercase">
-              <strong>A collection of resources created by a maker for makers</strong>
+            <p id="resources-text" class="section-title uppercase">A collection of resources created by a maker for makers
             </p>
           </div>
           <!-- RIGHT -->
@@ -55,26 +54,45 @@ const HomePage = {
             </div>
           </div>
         </section>
-        <!-- Who, What Why -->
-        <section id="about-section" class="col-2">
-          <!-- LEFT -->
+        <!-- About -->
+        <section id="about-section" class="col-3">
+          <!-- COL 1 -->
+          <div class="about-graphic section-content white-bg border">
+            <img src="images/profile_picture.png">
+          </div>
           <div class="section-content pink-bg border">
-            <p id="about-text" class="section-title uppercase">
-              Who, What, Why
-            </p>
+            <p id="about-text" class="section-title uppercase">Who</p>
             <div class="text-block">
               <p>Hi there!</p>
               <p>My name is Diogo Ribeiro, and I am the creator of makeracademy.org.</p>
-              <p>I am a designer, maker, tinkerer, and hacker from Portugal with a passion for making things that amaze, provide a unique experience, or help people in their day to day lives.</p>
-              <p>I created this platform as a home for resources and tools that help fellow makers focus more on the creative process instead of the technical one.</p>
-              <p>I am not an expert on all of the topics that I want to cover here, so I am looking to colaborate with other passionate creators to bring you the best content that I can.</p>
-              <p>This is an ever-growing project, so stay tuned for updates and new content!</p>
+              <p>I am a designer, maker, tinkerer, and hacker from Portugal with a passion for making things that amaze, provide a unique experience, or help people in their day-to-day lives.</p>
             </div>
           </div>
-          <!-- RIGHT -->
-          <div id="about-image" class="section-content white-bg border">
-            <img src="images/profile_picture.png">
+          <!-- COL 2 -->
+          <div class="about-graphic section-content white-bg border">
+            <img src="images/galaxy.svg">
           </div>
+          <div class="section-content pink-bg border">
+            <p id="about-text" class="section-title uppercase">What</p>
+            <div class="text-block">
+              <p>Wouldn't it be nice to have a platform where you can learn any creative ability without having to do hours of research on the Internet?</p>
+              <p>And have all of the resources you need in the same place to use as a reference when working on your projects?</p>
+              <p>That is what you can expect to find here ;)</p>
+            </div>
+          </div>
+          <!-- COL 3 -->
+          <div class="about-graphic section-content white-bg border">
+            <img src="images/filter.svg">
+          </div>
+          <div class="section-content pink-bg border">
+            <p id="about-text" class="section-title uppercase">Why</p>
+            <div class="text-block">
+              <p>You can pretty much find any information on the Internet these days.</p>
+              <p>But sometimes, that information is written in a language that only people with technical knowledge can understand.</p>
+              <p>My goal is to "translate" complex information and concepts into resources and classes that allow anyone to develop their creative skills and make any sort of project, no matter their previous knowledge.</p>
+            </div>
+          </div>
+          
         </section>
         <!-- Roadmap -->
         <section id="roadmap-section" class="border">
@@ -83,7 +101,7 @@ const HomePage = {
               <p class="section-title uppercase">Roadmap</p>
             </div>
             <div class="border">
-              <p class="section-subtitle">This are my plans for the near future</p>
+              <p class="section-subtitle">Here are my plans for the near future of the platform</p>
               <div class="roadmap">
                 <!-- Stop -->
                 <div class="roadmap-stop">

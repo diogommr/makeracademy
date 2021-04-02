@@ -52,13 +52,19 @@ h1, h2, h3, p {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.col-3 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .section-content {
   padding: 40px;
 }
 
 .section-title {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 1.4em;
 }
 
@@ -219,10 +225,15 @@ h1, h2, h3, p {
 /* ===================== ABOUT ===================== */
 
 
-#home-page #about-image {
+#home-page .about-graphic {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#home-page .about-graphic:nth-child(3) img {
+  /* background: tomato; */
+  padding-right: 20px;
 }
 
 
@@ -296,7 +307,7 @@ h1, h2, h3, p {
 }
 
 #home-page #roadmap-section .roadmap-stop:nth-child(3) .roadmap-stop-image img {
-  width: 60%;
+  width: 50%;
 }
 
 #home-page #roadmap-section .roadmap-stop p:first-of-type {
