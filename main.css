@@ -6,11 +6,11 @@
   --pastel-blue: #9BD9DB;
   --pastel-yellow: #FFCC66;
   --pastel-red: #EAB292;
+  --pastel-pink: #F6D7D4;
 }
 
 html, body {
   width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -58,8 +58,14 @@ h1, h2, h3, p {
 
 .section-title {
   font-size: 30px;
+  font-weight: bold;
   line-height: 1.4em;
   font-size: bold;
+}
+
+.text-block p {
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 .border {
@@ -73,6 +79,10 @@ h1, h2, h3, p {
 
 .blue-bg {
   background: var(--pastel-blue);
+}
+
+.pink-bg {
+  background: var(--pastel-pink);
 }
 
 #home-page {
@@ -121,6 +131,7 @@ h1, h2, h3, p {
   margin-left: -3px;
   /* margin-top: 40px; */
   display: block;
+  font-weight: normal;
 }
 
 #home-page #resources {
@@ -190,6 +201,15 @@ h1, h2, h3, p {
   text-align: center;
   font-size: 26px;
   padding: 20px;
+}
+
+
+/* ===================== ABOUT ===================== */
+
+#home-page #about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

@@ -55,7 +55,25 @@ const HomePage = {
           </div>
         </section>
         <!-- Who, What Why -->
-        <section>
+        <section class="col-2">
+          <!-- LEFT -->
+          <div class="section-content pink-bg border">
+            <p id="about-text" class="section-title uppercase">
+              Who, What, Why
+            </p>
+            <div class="text-block">
+              <p>Hi there!</p>
+              <p>My name is Diogo Ribeiro, and I am the creator of makeracademy.org.</p>
+              <p>I am a designer, maker, tinkerer, and hacker from Portugal with a passion for making things that amaze, provide a unique experience, or help people in their day to day lives.</p>
+              <p>I created this platform as a home for resources and tools that help fellow makers focus more on the creative process instead of the technical one.</p>
+              <p>I am not an expert on all of the topics that I want to cover here, so I am looking to colaborate with other passionate creators to bring you the best content that I can.</p>
+              <p>This is an ever-growing project, so stay tuned for updates and new content!</p>
+            </div>
+          </div>
+          <!-- RIGHT -->
+          <div id="about-image" class="section-content white-bg border">
+            <img src="images/profile_picture.png">
+          </div>
         </section>
       </div>
     </div>
