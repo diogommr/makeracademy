@@ -35,7 +35,7 @@ const HomePage = {
           </div>
           <!-- RIGHT -->
           <div id="resources" class="section-content blue-bg border">
-            <a class="resource" href="/#/devboard">
+            <a class="resource" href="/devboard">
               <img src="images/new.svg" class="new">
               <img src="images/devboards_graphic.svg" class="resource-image">
               <p class="resource-type">reference</p>
