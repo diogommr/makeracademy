@@ -154,7 +154,8 @@ const DevboardPage = {
 // Routing
 const router = VueRouter.createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: VueRouter.createWebHashHistory(),
+  // history: VueRouter.createWebHashHistory(),
+  history: VueRouter.createWebHistory(),
   routes: [
     { path: '/', component: HomePage },
     { path: '/devboard', component: DevboardPage },
