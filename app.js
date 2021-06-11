@@ -150,6 +150,150 @@ const DevboardPage = {
   `    
 };
 
+const SemanaMakerPage = {
+  template: `
+    <div id="semanamaker-page">
+      <div class="page-content page-center">
+        <header>
+          <h1>
+            Semana Maker <br>
+            2021
+          </h1>
+        </header>
+
+        <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org e o designer Jorge Moita fizeram uma parceria com o grupo Um Coletivo para a realização de um conjunto de atividades maker no sentido de informar a população sobre este movimento e cujas peças resultantes serão expostas durante o Festival A Salto.</p>
+        <p>Durante a Semana Maker serão também realizadas um conjunto de exposições no espaço A Carpintaria Makerspace (espaço maker temporário criado para o evento) nas quais os visitantes poderão aprender sobre o movimento e a cultura maker.</p>
+
+        <h2>Programa</h2>
+
+        <section>
+          <p class="event-date">
+            23 de Agosto <br>
+            (segunda)
+          </p>
+          <div class="event event-workshop">
+            <p class="event-info">10h - Biblioteca Municipal</p>
+
+            <h3 class="event-title">
+              Oficina | Introdução à Eletrónica e à Computação Física
+            </h3>
+
+            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
+            <p>Nesta oficina, irás participar na criação de uma peça que será exposta ao público durante o Festival A Salto.</p>
+            <p>Irás aprender:
+              <ul>
+                <li>Como criar um circuito elétrico básico</li>
+                <li>Como programar um microcontrolador de forma visual, fácil e divertida</li>
+                <li>Como criar projetos de eletrónica com som, movimento, luzes, e muito mais</li>
+              </ul>
+            </p>
+            <p>Deverás trazer:
+              <ul>
+                <li>Computador Portátil</li>
+              </ul>
+            </p>
+            <hr>
+            <p>Inscrições limitadas (5 vagas).</p>
+          </div>
+        </section>
+
+        <section>
+          <p class="event-date">
+            24 de Agosto <br>
+            (terça)
+          </p>
+          <div class="event event-workshop">
+            <p class="event-info">10h - A Carpintaria Makerspace</p>
+
+            <h3 class="event-title">
+              Oficina | Introdução à Eletrónica Têxtil (E-Textiles)
+            </h3>
+
+            <p>Vem descobrir o fantástico mundo da eletrónica têxtil criando um bordado interativo de forma simples e divertida.</p>
+            <p>Nesta oficina irás aprender:
+              <ul>
+                <li>Como costurar um bordado simples</li>
+                <li>Como fazer um circuito eletrónico básico</li>
+                <li>Como aplicar conhecimentos básicos de eletrónica na criação de uma peça têxtil interativa</li>
+              </ul>
+            </p>
+            <hr>
+            <p>Inscrições limitadas (5 vagas).</p>
+          </div>
+        </section>
+
+        <section>
+          <p class="event-date">
+            25 de Agosto <br>
+            (quarta)
+          </p>
+          <div class="event event-workshop">
+            <p class="event-info">10h - Biblioteca Municipal</p>
+
+            <h3 class="event-title">
+              Oficina | Introdução à Eletrónica e à Computação Física
+            </h3>
+
+            <p>Segunda edição da oficina.</p>
+          </div>
+        </section>
+
+        <section>
+          <p class="event-date">
+            26 de Agosto <br>
+            (quinta)
+          </p>
+          <div class="event event-workshop">
+            <p class="event-info">10h - A Carpintaria Makerspace</p>
+
+            <h3 class="event-title">
+              Oficina | Introdução à Eletrónica com Scrappy Circuits
+            </h3>
+
+            <p>Vem aprender a construir circuitos de eletrónica utilizando materiais do dia-a-dia.</p>
+            <p>Nesta oficina, irás aprender todas as bases que precisas sobre eletrónica para poder avançar com a criação de projetos mais complexos.</p>
+            <hr>
+            <p>Inscrições limitadas (6 vagas).</p>
+          </div>
+        </section>
+
+        <!-- Festival A Salto -->
+        <section>
+          <p class="event-date">
+            27 de Agosto <br>
+            (sexta)
+          </p>
+          <div class="event event-asalto">
+            <p class="event-info">A Carpintaria Makerspace</p>
+
+            <h3 class="event-title">
+              Festival A Salto | Mostra de Trabalhos
+            </h3>
+
+            <p>Exposição das peças criadas nas oficinas durante a Semana Maker.</p>
+          </div>
+        </section>
+
+        <section>
+          <p class="event-date">
+            28 de Agosto <br>
+            (sábado)
+          </p>
+          <div class="event event-asalto">
+            <p class="event-info">A Carpintaria Makerspace</p>
+
+            <h3 class="event-title">
+              Festival A Salto | Instalação
+            </h3>
+
+            <p>Intervenção no espaço no contexto de residência artística.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  `
+};
+
 
 // Routing
 const router = VueRouter.createRouter({
@@ -159,6 +303,7 @@ const router = VueRouter.createRouter({
   routes: [
     { path: '/', component: HomePage },
     { path: '/devboard', component: DevboardPage },
+    { path: '/semanamaker', component: SemanaMakerPage },
   ]
 })
 
