@@ -194,6 +194,9 @@ const SemanaMakerPage = {
             </p>
             <hr>
             <p>Inscrições limitadas (5 vagas).</p>
+            <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
+            <p>Bilhete: 15€</p>
+            <p>Duração: 2h a 3h</p>
           </div>
         </section>
 
@@ -219,6 +222,9 @@ const SemanaMakerPage = {
             </p>
             <hr>
             <p>Inscrições limitadas (5 vagas).</p>
+            <p>Público-alvo: Público em geral a partir dos 10 anos</p>
+            <p>Bilhete: 30€</p>
+            <p>Duração: 2h a 3h</p>
           </div>
         </section>
 
@@ -254,6 +260,9 @@ const SemanaMakerPage = {
             <p>Nesta oficina, irás aprender todas as bases que precisas sobre eletrónica para poder avançar com a criação de projetos mais complexos.</p>
             <hr>
             <p>Inscrições limitadas (6 vagas).</p>
+            <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
+            <p>Bilhete: 15€</p>
+            <p>Duração: 2h</p>
           </div>
         </section>
 
@@ -271,6 +280,7 @@ const SemanaMakerPage = {
             </h3>
 
             <p>Exposição das peças criadas nas oficinas durante a Semana Maker.</p>
+            <p>Exposição de projetos criados por makers locais.</p>
           </div>
         </section>
 
