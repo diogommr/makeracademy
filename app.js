@@ -172,7 +172,7 @@ const SemanaMakerPage = {
             (segunda)
           </p>
           <div class="event event-workshop">
-            <p class="event-info">10h - Biblioteca Municipal</p>
+            <p class="event-info">10h - Espaço a definir</p>
 
             <h3 class="event-title">
               Oficina | Introdução à Eletrónica e à Computação Física
@@ -206,7 +206,7 @@ const SemanaMakerPage = {
             (terça)
           </p>
           <div class="event event-workshop">
-            <p class="event-info">10h - A Carpintaria Makerspace</p>
+            <p class="event-info">10h - Espaço a definir</p>
 
             <h3 class="event-title">
               Oficina | Introdução à Eletrónica Têxtil (E-Textiles)
@@ -234,7 +234,7 @@ const SemanaMakerPage = {
             (quarta)
           </p>
           <div class="event event-workshop">
-            <p class="event-info">10h - Biblioteca Municipal</p>
+            <p class="event-info">10h - Espaço a definir</p>
 
             <h3 class="event-title">
               Oficina | Introdução à Eletrónica e à Computação Física
@@ -250,7 +250,7 @@ const SemanaMakerPage = {
             (quinta)
           </p>
           <div class="event event-workshop">
-            <p class="event-info">10h - A Carpintaria Makerspace</p>
+            <p class="event-info">10h - Espaço a definir</p>
 
             <h3 class="event-title">
               Oficina | Introdução à Eletrónica com Scrappy Circuits
