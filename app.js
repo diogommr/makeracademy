@@ -157,7 +157,7 @@ const SemanaMakerPage = {
 
             </div>
             -->
-            <img src="images/19I031_406.jpg" class="mb-3">
+            <img src="images/19I031_406_optimized.jpg" class="mb-3">
 
             <!-- Descrição -->
             <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
