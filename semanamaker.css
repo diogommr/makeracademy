@@ -1,125 +1,56 @@
 
 
-#semanamaker-page h1,
-#semanamaker-page h2,
-#semanamaker-page h3,
-#semanamaker-page h4,
-#semanamaker-page p {
-  margin: 0;
-  line-height: 1.5em;
-}
 
-#semanamaker-page a {
-  color: var(--dark-grey);
-  text-decoration: none;
-}
 
-#semanamaker-page p {
-  margin-bottom: 10px;
-}
-
-#semanamaker-page ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-#semanamaker-page li:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-#semanamaker-page hr {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  border: none;
-  height: 1px;
-  background: lightgrey;
+/* ========== Left Col ========== */
+.date {
+  position: sticky;
+  top: 20px;
 }
 
 
+/* ========== Event ========== */
+.event {
+  border-radius: 0;
+}
 
-/* ========== Body ========== */
+.event-workshop {
+  border: 2px solid #FFC107;
+  /* background: #FFF3CD; */
+}
 
-#semanamaker-page header {
-  color: var(--black);
+.event-exhibition {
+  border: 2px solid slateblue;
+}
+
+.event-video {
+  position: relative;
   width: 100%;
-  height: 250px;
-  background: url(images/cross_pattern_transparent.png),
-  #FFCC66;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 56.25%;
+  background: dimgray;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 
-#semanamaker-page header h1 {
-  text-align: center;
-  font-size: 40px;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+.btn-primary {
+  color: #222;
+  background: #FFC107;
+  border: none;
+  border-radius: 0;
+}
+.btn-primary:hover {
+  background: #CC9A06;
+}
+.btn-primary.disabled {
+  color: #222;
+  background: #FFC107;
+  border: none;
 }
 
-#semanamaker-page h2 {
-  text-align: center;
-  font-size: 36px;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
-  margin: 40px;
+.event-cta {
+  margin-top: 10px;
 }
 
-#semanamaker-page .page-content-container {
-  flex-grow: 1;
-  width: 100%;
+.hidden {
+  display: none;
 }
-
-#semanamaker-page .page-content {
-  /* width: calc(100% - 80px);
-  max-width: 1100px;
-  margin: auto; */
-  padding-bottom: 80px;
-}
-
-#semanamaker-page .page-content section {
-  margin-top: 40px;
-}
-
-/* ----- Eventos ----- */
-#semanamaker-page .event-date {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-#semanamaker-page .event {
-  width: calc(100% - 40px);
-  border: 1px solid lightgrey;
-  padding: 20px;
-}
-
-#semanamaker-page .event-workshop {
-  border: 2px solid darksalmon;
-}
-
-#semanamaker-page .event-asalto {
-  border: 2px solid mediumslateblue;
-}
-
-#semanamaker-page .event-info {
-  margin-bottom: 10px;
-}
-
-
-
-#semanamaker-page .event-type {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-#semanamaker-page .event-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-
-/* ========== Footer ========== */
-/* .page-footer {
-
-} */

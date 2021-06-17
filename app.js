@@ -10,6 +10,32 @@ const app = createApp({
   }
 });
 
+// Components
+app.component('navbar', {
+  template: `
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">makeracademy.org</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/semanamaker">Semana Maker</a>
+            </li>
+          </ul>
+          <!--
+          <span class="navbar-text">
+            redes sociais
+          </span>
+          -->
+        </div>
+      </div>
+    </nav>
+  `
+});
+
 // Page Components
 const HomePage = {
   data(){
@@ -18,124 +44,63 @@ const HomePage = {
     }
   },
   template: `
-    <div id="home-page">
-      <div class="page-content page-center border">
-        <header class="col-1 border">
-          <h1>
-            <p>Diogo's</p>
-            <p>Maker Academy</p>
-          </h1>
-        </header>
-        <!-- Resources -->
-        <section class="col-2">
-          <!-- LEFT -->
-          <div class="section-content white-bg border">
-            <p id="resources-text" class="section-title uppercase">A collection of resources created by a maker for makers
-            </p>
-          </div>
-          <!-- RIGHT -->
-          <div id="resources" class="section-content blue-bg border">
-            <a class="resource" href="/devboard">
-              <img src="images/new.svg" class="new">
-              <img src="images/devboards_graphic.svg" class="resource-image">
-              <p class="resource-type">reference</p>
-              <h3 class="resource-title">DevBoards</h3>
-            </a>
-          </div>
-        </section>
-        <!-- Learning -->
-        <section id="school-section" class="border">
-          <div class="section-content border">
-            <div class="border">
-              <p class="section-title uppercase">Comming Soon</p>
+    <navbar></navbar>
+
+    <!-- Header -->
+    <!--
+    <header class="container-fluid hero">
+      <h1 class="text-center display-2 fw-bold">makeracademy</h1>
+      <p></p>
+    </header>
+    -->
+
+    <!-- Body -->
+    <main class="container-fluid">
+
+      <section id="section-mission" class="container-fluid">
+
+        <div className="container-md p-5 d-flex flex-column">
+
+          <h2 class="section-title text-center mb-5">Missão</h2>
+
+          <p>A makeracademy.org surge com um único propósito: Empoderar os Cidadãos.</p>
+          <p>O nosso objetivo é contribuir para a democratização do fazer, proporcionando os conhecimentos necessários para permitir a qualquer pessoa materializar as suas ideias criativas.</p>
+
+          <img src="images/closed_hands.svg" style="max-width: 300px;" class="m-auto mt-5" />
+
+        </div>        
+
+      </section>
+
+      <section id="section-services" class="container-fluid">
+
+        <div className="container-md p-5">
+
+          <div className="row gx-5 ">
+            <h2 class="section-title text-center mb-5">Serviços</h2>
+
+            <div class=" card-body col col-2">
+              <h3 class="card-title">Workshops</h3>
+              <p class="card-text">Dinamizamos atividades que visam equipar o público com habilidades maker nos âmbitos de eletrónica e computação física, literacia digital, <em>e-textiles</em>, criação multimédia, programação e muitos mais!</p>
             </div>
-            <div class="border">
-              <p>An entire learning section dedicated to teaching Maker Abilities!</p>
+
+            <div class=" card-body col col-2">
+              <h3 class="card-title">Consultoria</h3>
+              <p class="card-text">Prestamos consultoria na implementação de soluções maker no posto de trabalho, em educação e a projetos pessoais.</p>
             </div>
+
           </div>
-        </section>
-        <!-- About -->
-        <section id="about-section" class="col-3">
-          <!-- COL 1 -->
-          <div class="about-graphic section-content white-bg border">
-            <img src="images/profile_picture.png">
           </div>
-          <div class="section-content pink-bg border">
-            <p id="about-text" class="section-title uppercase">Who</p>
-            <div class="text-block">
-              <p>Hi there!</p>
-              <p>My name is Diogo Ribeiro, and I am the creator of makeracademy.org.</p>
-              <p>I am a designer, maker, tinkerer, and hacker from Portugal with a passion for making things that amaze, provide a unique experience, or help people in their day-to-day lives.</p>
-            </div>
-          </div>
-          <!-- COL 2 -->
-          <div class="about-graphic section-content white-bg border">
-            <img src="images/galaxy.svg">
-          </div>
-          <div class="section-content pink-bg border">
-            <p id="about-text" class="section-title uppercase">What</p>
-            <div class="text-block">
-              <p>Wouldn't it be nice to have a platform where you can learn any creative ability without having to do hours of research on the Internet?</p>
-              <p>And have all of the resources you need in the same place to use as a reference when working on your projects?</p>
-              <p>That is what you can expect to find here ;)</p>
-            </div>
-          </div>
-          <!-- COL 3 -->
-          <div class="about-graphic section-content white-bg border">
-            <img src="images/filter.svg">
-          </div>
-          <div class="section-content pink-bg border">
-            <p id="about-text" class="section-title uppercase">Why</p>
-            <div class="text-block">
-              <p>You can pretty much find any information on the Internet these days.</p>
-              <p>But sometimes, that information is written in a language that only people with technical knowledge can understand.</p>
-              <p>My goal is to "translate" complex information and concepts into resources and classes that allow anyone to develop their creative skills and make any sort of project, no matter their previous knowledge.</p>
-            </div>
-          </div>
-          
-        </section>
-        <!-- Roadmap -->
-        <section id="roadmap-section" class="border">
-          <div class="section-content border">
-            <div class="border">
-              <p class="section-title uppercase">Roadmap</p>
-            </div>
-            <div class="border">
-              <p class="section-subtitle">Here are my plans for the near future of the platform</p>
-              <div class="roadmap">
-                <!-- Stop -->
-                <div class="roadmap-stop">
-                  <div class="roadmap-stop-image">
-                    DOM
-                  </div>
-                  <p>Add Resource</p>
-                  <p>DOM Reference</p>
-                </div>
-                <img src="images/arrow.svg" class="roadmap-arrow">
-                <!-- Stop -->
-                <div class="roadmap-stop">
-                  <div class="roadmap-stop-image">
-                    <img src="images/cards.svg">
-                  </div>
-                  <p>Add Resource</p>
-                  <p>Printable Handouts</p>
-                </div>
-                <img src="images/arrow.svg" class="roadmap-arrow">
-                <!-- Stop -->
-                <div class="roadmap-stop">
-                  <div class="roadmap-stop-image">
-                    { }
-                  </div>
-                  <p>Add Resource</p>
-                  <p>Languages Reference</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </section>
+
+      </section>
+      
+    </main> <!-- End of .container -->
+    
+    <footer class="container-fluid">
+      <div class="container-md p-5">
+        <p>© 2020 Todos os direitos reservados</p>
       </div>
-    </div>
+    </footer>
   `
 };
 
@@ -152,32 +117,49 @@ const DevboardPage = {
 
 const SemanaMakerPage = {
   template: `
-    <div id="semanamaker-page">
-      <div class="page-content page-center">
-        <header>
-          <h1>
-            Semana Maker <br>
-            2021
-          </h1>
-        </header>
+    <navbar></navbar>
 
-        <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org e o designer Jorge Moita fizeram uma parceria com o grupo Um Coletivo para a realização de um conjunto de atividades maker no sentido de informar a população sobre este movimento e cujas peças resultantes serão expostas durante o Festival A Salto.</p>
-        <p>Durante a Semana Maker serão também realizadas um conjunto de exposições no espaço A Carpintaria Makerspace (espaço maker temporário criado para o evento) nas quais os visitantes poderão aprender sobre o movimento e a cultura maker.</p>
+    <!-- Header -->
+    <header class="container-fluid">
+      <h1 class="text-center display-2 fw-bold">Semana Maker</h1>
+    </header>
 
-        <h2>Programa</h2>
+    <!-- Body -->
+    <main class="container-md pt-4">
 
-        <section>
-          <p class="event-date">
-            23 de Agosto <br>
-            (segunda)
-          </p>
-          <div class="event event-workshop">
-            <p class="event-info">10h - Espaço a definir</p>
+      <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org e o designer Jorge Moita fizeram uma parceria com o grupo Um Coletivo para a realização de um conjunto de atividades <a href="https://pt.wikipedia.org/wiki/Cultura_maker" target="_blank">maker</a> no sentido de informar a população sobre este movimento e cujas peças resultantes serão expostas durante o Festival A Salto.</p>
+      <p>Durante a Semana Maker serão também realizadas um conjunto de exposições no espaço A Carpintaria Makerspace (<a href="https://pt.wikipedia.org/wiki/Hackerspace" target="_blank">espaço maker</a> temporário criado para o evento) nas quais os visitantes poderão aprender sobre o movimento e a cultura maker.</p>
+      <p>O programa ainda não está 100% fechado, por isso consulta esta página regularmente para estares a par das últimas novidades!</p>
 
-            <h3 class="event-title">
-              Oficina | Introdução à Eletrónica e à Computação Física
-            </h3>
+      <h2 class="text-center m-5">Programa</h2>
 
+      <!-- Section -->
+      <section class="row header mb-5 ">
+
+        <div class="col col-md-4">
+          <div class="date">
+            <p class="fs-4 mb-0">23 de Agosto</p>
+            <p class="text-muted">segunda</p>
+          </div>
+        </div>
+
+        <div class="col col-md-8">
+          <div class="event card card-body event-workshop">
+            <!-- Hora e Local -->
+            <p class="event-time fs-4 mb-2">10h - Espaço a definir</p>
+
+            <!-- Título do evento -->
+            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica e à Computação Física</h2>
+
+            <!-- Vídeo de apresentação -->
+            <!--
+            <div class="event-video">
+
+            </div>
+            -->
+            <img src="images/19I031_406.jpg" class="mb-3">
+
+            <!-- Descrição -->
             <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
             <p>Nesta oficina, irás participar na criação de uma peça que será exposta ao público durante o Festival A Salto.</p>
             <p>Irás aprender:
@@ -192,26 +174,44 @@ const SemanaMakerPage = {
                 <li>Computador Portátil</li>
               </ul>
             </p>
-            <hr>
+            <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
             <p>Bilhete: 15€</p>
             <p>Duração: 2h a 3h</p>
+            <a href="#" target="_blank" class="btn btn-primary event-cta disabled">Inscrições disponíveis em breve</a>
+
+          </div> <!-- end of event -->
+        </div> <!-- end of .col -->
+
+      </section>
+
+      <!-- Section -->
+      <section class="row header mb-5">
+
+        <div class="col col-md-4">
+          <div class="date">
+            <p class="fs-4 mb-0">24 de Agosto</p>
+            <p class="text-muted">terça</p>
           </div>
-        </section>
+        </div>
 
-        <section>
-          <p class="event-date">
-            24 de Agosto <br>
-            (terça)
-          </p>
-          <div class="event event-workshop">
-            <p class="event-info">10h - Espaço a definir</p>
+        <div class="col col-md-8">
+          <div class="event card card-body event-workshop">
+            <!-- Hora e Local -->
+            <p class="event-time fs-4 mb-1">10h - Espaço a definir</p>
 
-            <h3 class="event-title">
-              Oficina | Introdução à Eletrónica Têxtil (E-Textiles)
-            </h3>
+            <!-- Título do evento -->
+            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica Têxtil (E-Textiles) </h2>
 
+            <!-- Vídeo de apresentação -->
+            <!--
+            <div class="event-video">
+
+            </div>
+            -->
+
+            <!-- Descrição -->
             <p>Vem descobrir o fantástico mundo da eletrónica têxtil criando um bordado interativo de forma simples e divertida.</p>
             <p>Nesta oficina irás aprender:
               <ul>
@@ -220,87 +220,111 @@ const SemanaMakerPage = {
                 <li>Como aplicar conhecimentos básicos de eletrónica na criação de uma peça têxtil interativa</li>
               </ul>
             </p>
-            <hr>
+            <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 10 anos</p>
             <p>Bilhete: 30€</p>
             <p>Duração: 2h a 3h</p>
+            <a href="#" target="_blank" class="btn btn-primary event-cta disabled">Inscrições disponíveis em breve</a>
+
+          </div> <!-- end of event -->
+        </div> <!-- end of .col -->
+
+      </section>
+
+      <!-- Section -->
+      <section class="row header mb-5">
+
+        <div class="col col-md-4">
+          <div class="date">
+            <p class="fs-4 mb-0">25 de Agosto</p>
+            <p class="text-muted">quarta</p>
           </div>
-        </section>
+        </div>
 
-        <section>
-          <p class="event-date">
-            25 de Agosto <br>
-            (quarta)
-          </p>
-          <div class="event event-workshop">
-            <p class="event-info">10h - Espaço a definir</p>
+        <div class="col col-md-8">
+          <div class="event card card-body event-workshop">
+            <!-- Hora e Local -->
+            <p class="event-time fs-4 mb-1">10h - Espaço a definir</p>
 
-            <h3 class="event-title">
-              Oficina | Introdução à Eletrónica e à Computação Física
-            </h3>
+            <!-- Título do evento -->
+            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica e à Computação Física</h2>
 
-            <p>Segunda edição da oficina.</p>
-          </div>
-        </section>
+            <!-- Vídeo de apresentação -->
+            <!--
+            <div class="event-video">
 
-        <section>
-          <p class="event-date">
-            26 de Agosto <br>
-            (quinta)
-          </p>
-          <div class="event event-workshop">
-            <p class="event-info">10h - Espaço a definir</p>
+            </div>
+            -->
 
-            <h3 class="event-title">
-              Oficina | Introdução à Eletrónica com Scrappy Circuits
-            </h3>
-
-            <p>Vem aprender a construir circuitos de eletrónica utilizando materiais do dia-a-dia.</p>
-            <p>Nesta oficina, irás aprender todas as bases que precisas sobre eletrónica para poder avançar com a criação de projetos mais complexos.</p>
-            <hr>
-            <p>Inscrições limitadas (6 vagas).</p>
+            <!-- Descrição -->
+            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
+            <p>Nesta oficina, irás participar na criação de uma peça que será exposta ao público durante o Festival A Salto.</p>
+            <p>Irás aprender:
+              <ul>
+                <li>Como criar um circuito elétrico básico</li>
+                <li>Como programar um microcontrolador de forma visual, fácil e divertida</li>
+                <li>Como criar projetos de eletrónica com som, movimento, luzes, e muito mais</li>
+              </ul>
+            </p>
+            <p>Deverás trazer:
+              <ul>
+                <li>Computador Portátil</li>
+              </ul>
+            </p>
+            <hr class="mt-0">
+            <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
             <p>Bilhete: 15€</p>
-            <p>Duração: 2h</p>
+            <p>Duração: 2h a 3h</p>
+            <a href="#" target="_blank" class="btn btn-primary event-cta disabled">Inscrições disponíveis em breve</a>
+
+          </div> <!-- end of event -->
+        </div> <!-- end of .col -->
+
+      </section>
+
+      <!-- Section -->
+      <section class="row header mb-5">
+
+        <div class="col col-md-4">
+          <div class="date">
+            <p class="fs-4 mb-0">28 de Agosto</p>
+            <p class="text-muted">sábado</p>
           </div>
-        </section>
+        </div>
 
-        <!-- Festival A Salto -->
-        <section>
-          <p class="event-date">
-            27 de Agosto <br>
-            (sexta)
-          </p>
-          <div class="event event-asalto">
-            <p class="event-info">A Carpintaria Makerspace</p>
+        <div class="col col-md-8">
+          <div class="event card card-body event-exhibition">
+            <!-- Hora e Local -->
+            <p class="event-time fs-4 mb-1">10h-12:30h, 15h-19h - A Carpintaria Makerspace</p>
 
-            <h3 class="event-title">
-              Festival A Salto | Mostra de Trabalhos
-            </h3>
+            <!-- Título do evento -->
+            <h2 class="event-title fw-bold mb-3">Mostra de Trabalhos</h2>
 
+            <!-- Vídeo de apresentação -->
+            <!--
+            <div class="event-video">
+
+            </div>
+            -->
+
+            <!-- Descrição -->
             <p>Exposição das peças criadas nas oficinas durante a Semana Maker.</p>
             <p>Exposição de projetos criados por makers locais.</p>
-          </div>
-        </section>
 
-        <section>
-          <p class="event-date">
-            28 de Agosto <br>
-            (sábado)
-          </p>
-          <div class="event event-asalto">
-            <p class="event-info">A Carpintaria Makerspace</p>
+          </div> <!-- end of event -->
+        </div> <!-- end of .col -->
 
-            <h3 class="event-title">
-              Festival A Salto | Instalação
-            </h3>
-
-            <p>Intervenção no espaço no contexto de residência artística.</p>
-          </div>
-        </section>
+      </section>
+      
+    </main> <!-- End of .container -->
+    
+    <footer class="container-fluid">
+      <div class="container">
+        <br><br><br><br><br>
       </div>
-    </div>
+    </footer>
   `
 };
 
@@ -312,7 +336,6 @@ const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes: [
     { path: '/', component: HomePage },
-    { path: '/devboard', component: DevboardPage },
     { path: '/semanamaker', component: SemanaMakerPage },
   ]
 })
