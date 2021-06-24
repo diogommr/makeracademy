@@ -130,7 +130,14 @@ const SemanaMakerPage = {
       'page_title': 'Semana Maker',
       'page_path': '/semanamaker'
     });
-
+  },
+  methods: {
+    workshopEnrollment(workshopName){
+      gtag('event', 'workshop_enrollment', {
+        'event_label': workshopName,
+        'event_category': 'engagement'
+      });
+    }
   },
   template: `
     <navbar></navbar>
@@ -195,7 +202,7 @@ const SemanaMakerPage = {
             <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
             <p>Bilhete: 15€</p>
             <p>Duração: 2h a 3h</p>
-            <a href="#" target="_blank" class="btn btn-primary event-cta disabled">Inscrições disponíveis em breve</a>
+            <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
 
           </div> <!-- end of event -->
         </div> <!-- end of .col -->
@@ -218,7 +225,7 @@ const SemanaMakerPage = {
             <p class="event-time fs-4 mb-1">10h - Espaço a definir</p>
 
             <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica Têxtil (E-Textiles) </h2>
+            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica Têxtil (E-Textiles)</h2>
 
             <!-- Vídeo de apresentação -->
             <!--
@@ -241,7 +248,7 @@ const SemanaMakerPage = {
             <p>Público-alvo: Público em geral a partir dos 10 anos</p>
             <p>Bilhete: 30€</p>
             <p>Duração: 2h a 3h</p>
-            <a href="#" target="_blank" class="btn btn-primary event-cta disabled">Inscrições disponíveis em breve</a>
+            <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica Têxtil')">Inscrições disponíveis em breve</a>
 
           </div> <!-- end of event -->
         </div> <!-- end of .col -->
@@ -293,7 +300,7 @@ const SemanaMakerPage = {
             <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
             <p>Bilhete: 15€</p>
             <p>Duração: 2h a 3h</p>
-            <a href="#" target="_blank" class="btn btn-primary event-cta disabled">Inscrições disponíveis em breve</a>
+            <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
 
           </div> <!-- end of event -->
         </div> <!-- end of .col -->
