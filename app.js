@@ -137,6 +137,7 @@ const SemanaMakerPage = {
         'event_label': workshopName,
         'event_category': 'engagement'
       });
+      console.log(workshopName);
     }
   },
   template: `
