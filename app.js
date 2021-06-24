@@ -202,7 +202,7 @@ const SemanaMakerPage = {
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
             <p>Bilhete: 15€</p>
-            <p>Duração: 2h a 3h</p>
+            <p onclick="alert()">Duração: 2h a 3h</p>
             <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
 
           </div> <!-- end of event -->
