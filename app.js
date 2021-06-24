@@ -132,12 +132,12 @@ const SemanaMakerPage = {
     });
   },
   methods: {
-    workshopEnrollment(workshopName){
+    workshopEnrollment(workshopName) {
+      console.log(workshopName);
       gtag('event', 'workshop_enrollment', {
         'event_label': workshopName,
         'event_category': 'engagement'
       });
-      console.log(workshopName);
     }
   },
   template: `
