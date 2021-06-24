@@ -126,6 +126,11 @@ const SemanaMakerPage = {
   },
   mounted() {
     document.title = this.title;
+    gtag('config', 'G-1YHC69NMEF', {
+      'page_title': 'Semana Maker',
+      'page_path': '/semanamaker'
+    });
+
   },
   template: `
     <navbar></navbar>
