@@ -40,8 +40,11 @@ app.component('navbar', {
 const HomePage = {
   data(){
     return {
-      message: 'SUP!'
+      title: 'Maker Academy'
     }
+  },
+  mounted() {
+    document.title = this.title;
   },
   template: `
     <navbar></navbar>
@@ -116,6 +119,14 @@ const DevboardPage = {
 };
 
 const SemanaMakerPage = {
+  data() {
+    return {
+      title: 'Maker Academy | Semana Maker'
+    }
+  },
+  mounted() {
+    document.title = this.title;
+  },
   template: `
     <navbar></navbar>
 
