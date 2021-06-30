@@ -151,8 +151,7 @@ const SemanaMakerPage = {
     <!-- Body -->
     <main class="container-md pt-4">
 
-      <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org e o designer Jorge Moita fizeram uma parceria com o grupo Um Coletivo para a realização de um conjunto de atividades <a href="https://pt.wikipedia.org/wiki/Cultura_maker" target="_blank">maker</a> no sentido de informar a população sobre este movimento e cujas peças resultantes serão expostas durante o Festival A Salto.</p>
-      <p>Durante a Semana Maker serão também realizadas um conjunto de exposições no espaço A Carpintaria Makerspace (<a href="https://pt.wikipedia.org/wiki/Hackerspace" target="_blank">espaço maker</a> temporário criado para o evento) nas quais os visitantes poderão aprender sobre o movimento e a cultura maker.</p>
+      <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org fez uma parceria com o grupo Um Coletivo para a realização de um conjunto de atividades <a href="https://pt.wikipedia.org/wiki/Cultura_maker" target="_blank">maker</a> no sentido de informar a população sobre este movimento e cujas peças resultantes serão expostas durante o Festival A Salto.</p>
       <p>O programa ainda não está 100% fechado, por isso consulta esta página regularmente para estares a par das últimas novidades!</p>
 
       <h2 class="text-center m-5">Programa</h2>
