@@ -343,8 +343,8 @@ const SemanaMakerPage = {
     </main> <!-- End of .container -->
     
     <footer class="container-fluid">
-      <div class="container">
-        <br><br><br><br><br>
+      <div class="container-md p-5">
+        <p>© 2020 Todos os direitos reservados</p>
       </div>
     </footer>
   `
