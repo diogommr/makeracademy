@@ -320,7 +320,7 @@ const SemanaMakerPage = {
         <div class="col col-md-8">
           <div class="event card card-body event-exhibition">
             <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-1">10h-12:30h, 15h-19h - A Carpintaria Makerspace</p>
+            <p class="event-time fs-4 mb-1">10h-12:30h, 15h-19h - Tv. da Alcáçova nº1</p>
 
             <!-- Título do evento -->
             <h2 class="event-title fw-bold mb-3">Mostra de Trabalhos</h2>
