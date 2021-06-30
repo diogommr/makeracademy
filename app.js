@@ -334,7 +334,6 @@ const SemanaMakerPage = {
 
             <!-- Descrição -->
             <p>Exposição das peças criadas nas oficinas durante a Semana Maker.</p>
-            <p>Exposição de projetos criados por makers locais.</p>
 
           </div> <!-- end of event -->
         </div> <!-- end of .col -->
