@@ -222,7 +222,7 @@ const SemanaMakerPage = {
         <div class="col col-md-8">
           <div class="event card card-body event-workshop">
             <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-1">10h - Espaço a definir</p>
+            <p class="event-time fs-4 mb-1">10h - Casa Tangente</p>
 
             <!-- Título do evento -->
             <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica Têxtil (E-Textiles)</h2>
@@ -268,10 +268,10 @@ const SemanaMakerPage = {
         <div class="col col-md-8">
           <div class="event card card-body event-workshop">
             <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-1">10h - Espaço a definir</p>
+            <p class="event-time fs-4 mb-1">10h - Casa Tangente</p>
 
             <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica e à Computação Física</h2>
+            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica com Scrappy Circuits</h2>
 
             <!-- Vídeo de apresentação -->
             <!--
@@ -282,17 +282,11 @@ const SemanaMakerPage = {
 
             <!-- Descrição -->
             <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
-            <p>Nesta oficina, irás participar na criação de uma peça que será exposta ao público durante o Festival A Salto.</p>
+            <p>Nesta oficina, irás aprender a usar diversos componentes eletrónicos retirados de lixo eletrónico.</p>
             <p>Irás aprender:
               <ul>
                 <li>Como criar um circuito elétrico básico</li>
-                <li>Como programar um microcontrolador de forma visual, fácil e divertida</li>
-                <li>Como criar projetos de eletrónica com som, movimento, luzes, e muito mais</li>
-              </ul>
-            </p>
-            <p>Deverás trazer:
-              <ul>
-                <li>Computador Portátil</li>
+                <li>Como ligar e usar componentes tais como LEDs, motores, botões e interruptores, e muitos mais</li>
               </ul>
             </p>
             <hr class="mt-0">
