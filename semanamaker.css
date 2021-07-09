@@ -54,3 +54,16 @@
 .hidden {
   display: none;
 }
+
+
+/* ========== ICONS ========== */
+.social-networks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-networks > * {
+  margin: 10px;
+}
