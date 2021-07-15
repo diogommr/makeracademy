@@ -151,7 +151,7 @@ const SemanaMakerPage = {
     <!-- Body -->
     <main class="container-md pt-4">
 
-      <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org fez uma parceria com o grupo Um Coletivo para a realização de um conjunto de atividades <a href="https://pt.wikipedia.org/wiki/Cultura_maker" target="_blank">maker</a> no sentido de informar a população sobre este movimento e cujas peças resultantes serão expostas durante o Festival A Salto.</p>
+      <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org irá realizar um conjunto de atividades <a href="https://pt.wikipedia.org/wiki/Cultura_maker" target="_blank">maker</a> no sentido de informar a população sobre este movimento.</p>
       <p>O programa ainda não está 100% fechado, por isso consulta esta página regularmente para estares a par das últimas novidades, ou segue-nos nas redes sociais!</p>
 
       <p class="social-networks">
@@ -200,7 +200,6 @@ const SemanaMakerPage = {
 
             <!-- Descrição -->
             <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
-            <p>Nesta oficina, irás participar na criação de uma peça que será exposta ao público durante o Festival A Salto.</p>
             <p>Irás aprender:
               <ul>
                 <li>Como criar um circuito elétrico básico</li>
@@ -215,8 +214,8 @@ const SemanaMakerPage = {
             </p>
             <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
-            <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
-            <p>Bilhete: 15€</p>
+            <p>Público-alvo: Público em geral a partir dos 9 anos</p>
+            <p>Preço: 15€</p>
             <p>Duração: 2h a 3h</p>
             <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
 
@@ -262,7 +261,7 @@ const SemanaMakerPage = {
             <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 10 anos</p>
-            <p>Bilhete: 30€</p>
+            <p>Preço: 30€</p>
             <p>Duração: 2h a 3h</p>
             <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica Têxtil')">Inscrições disponíveis em breve</a>
 
@@ -297,7 +296,7 @@ const SemanaMakerPage = {
             -->
 
             <!-- Descrição -->
-            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
+            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida com materiais muito acessíveis.</p>
             <p>Nesta oficina, irás aprender a usar diversos componentes eletrónicos retirados de lixo eletrónico.</p>
             <p>Irás aprender:
               <ul>
@@ -308,7 +307,7 @@ const SemanaMakerPage = {
             <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
-            <p>Bilhete: 15€</p>
+            <p>Preço: 15€</p>
             <p>Duração: 2h a 3h</p>
             <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
 
@@ -318,6 +317,7 @@ const SemanaMakerPage = {
       </section>
 
       <!-- Section -->
+      <!--
       <section class="row header mb-5">
 
         <div class="col col-md-4">
@@ -329,26 +329,18 @@ const SemanaMakerPage = {
 
         <div class="col col-md-8">
           <div class="event card card-body event-exhibition">
-            <!-- Hora e Local -->
+
             <p class="event-time fs-4 mb-1">10h-12:30h, 15h-19h - Tv. da Alcáçova nº1</p>
 
-            <!-- Título do evento -->
             <h2 class="event-title fw-bold mb-3">Mostra de Trabalhos</h2>
 
-            <!-- Vídeo de apresentação -->
-            <!--
-            <div class="event-video">
-
-            </div>
-            -->
-
-            <!-- Descrição -->
             <p>Exposição das peças criadas nas oficinas durante a Semana Maker.</p>
 
-          </div> <!-- end of event -->
-        </div> <!-- end of .col -->
+          </div> 
+        </div> 
 
       </section>
+      -->
       
     </main> <!-- End of .container -->
     
@@ -364,8 +356,8 @@ const SemanaMakerPage = {
 // Routing
 const router = VueRouter.createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  // history: VueRouter.createWebHashHistory(),
-  history: VueRouter.createWebHistory(),
+  history: VueRouter.createWebHashHistory(),
+  // history: VueRouter.createWebHistory(),
   routes: [
     { path: '/', component: HomePage },
     { path: '/semanamaker', component: SemanaMakerPage },
