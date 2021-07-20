@@ -173,7 +173,7 @@ const SemanaMakerPage = {
       <h2 class="text-center m-5">Programa</h2>
 
       <!-- Section -->
-      <section class="row header mb-5 ">
+      <section class="row header mb-5">
 
         <div class="col col-md-4">
           <div class="date">
@@ -185,10 +185,10 @@ const SemanaMakerPage = {
         <div class="col col-md-8">
           <div class="event card card-body event-workshop">
             <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-2">10h - Espaço a definir</p>
+            <p class="event-time fs-4 mb-1">10h - Casa Tangente</p>
 
             <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica e à Computação Física</h2>
+            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica com Scrappy Circuits</h2>
 
             <!-- Vídeo de apresentação -->
             <!--
@@ -196,28 +196,24 @@ const SemanaMakerPage = {
 
             </div>
             -->
-            <img src="images/19I031_406_optimized.jpg" class="mb-3">
+            <img src="images/_MG_8295.jpg" class="mb-3">
 
             <!-- Descrição -->
-            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
+            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida com materiais muito acessíveis.</p>
+            <p>Esta oficina é para miúdos e graúdos, por isso encorajamos a todo aquele que se queira introduzir ao fantástico mundo da eletrónica a participar!</p>
             <p>Irás aprender:
               <ul>
                 <li>Como criar um circuito elétrico básico</li>
-                <li>Como programar um microcontrolador de forma visual, fácil e divertida</li>
-                <li>Como criar projetos de eletrónica com som, movimento, luzes, e muito mais</li>
-              </ul>
-            </p>
-            <p>Deverás trazer:
-              <ul>
-                <li>Computador Portátil</li>
+                <li>Como criar e ler um esquema elétrico básico</li>
+                <li>Como ligar e usar componentes tais como LEDs, motores, botões e interruptores, e muitos mais</li>
               </ul>
             </p>
             <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
-            <p>Público-alvo: Público em geral a partir dos 9 anos</p>
+            <p>Público-alvo: Público em geral a partir dos 9 anos.</p>
             <p>Preço: 15€</p>
-            <p>Duração: 2h a 3h</p>
-            <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
+            <p>Duração: 2h</p>
+            <a href="https://forms.gle/DdxEWrjLQWuNGX44A" target="_blank" class="btn btn-primary event-cta" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscreve-te Já!</a>
 
           </div> <!-- end of event -->
         </div> <!-- end of .col -->
@@ -271,7 +267,7 @@ const SemanaMakerPage = {
       </section>
 
       <!-- Section -->
-      <section class="row header mb-5">
+      <section class="row header mb-5 ">
 
         <div class="col col-md-4">
           <div class="date">
@@ -283,10 +279,10 @@ const SemanaMakerPage = {
         <div class="col col-md-8">
           <div class="event card card-body event-workshop">
             <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-1">10h - Casa Tangente</p>
+            <p class="event-time fs-4 mb-2">10h - Espaço a definir</p>
 
             <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica com Scrappy Circuits</h2>
+            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica e à Computação Física</h2>
 
             <!-- Vídeo de apresentação -->
             <!--
@@ -294,19 +290,25 @@ const SemanaMakerPage = {
 
             </div>
             -->
+            <img src="images/19I031_406_optimized.jpg" class="mb-3">
 
             <!-- Descrição -->
-            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida com materiais muito acessíveis.</p>
-            <p>Nesta oficina, irás aprender a usar diversos componentes eletrónicos retirados de lixo eletrónico.</p>
+            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
             <p>Irás aprender:
               <ul>
                 <li>Como criar um circuito elétrico básico</li>
-                <li>Como ligar e usar componentes tais como LEDs, motores, botões e interruptores, e muitos mais</li>
+                <li>Como programar um microcontrolador de forma visual, fácil e divertida</li>
+                <li>Como criar projetos de eletrónica com som, movimento, luzes, e muito mais</li>
+              </ul>
+            </p>
+            <p>Deverás trazer:
+              <ul>
+                <li>Computador Portátil</li>
               </ul>
             </p>
             <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
-            <p>Público-alvo: Público em geral a partir dos 6 anos (crianças deverão ir acompanhadas por um adulto)</p>
+            <p>Público-alvo: Público em geral a partir dos 9 anos</p>
             <p>Preço: 15€</p>
             <p>Duração: 2h a 3h</p>
             <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
