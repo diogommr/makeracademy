@@ -212,7 +212,7 @@ const SemanaMakerPage = {
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 9 anos.</p>
             <p>Preço: 15€</p>
-            <p>Duração: 2h</p>
+            <p>Duração: 2h30m</p>
             <a href="https://forms.gle/DdxEWrjLQWuNGX44A" target="_blank" class="btn btn-primary event-cta" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscreve-te Já!</a>
 
           </div> <!-- end of event -->
@@ -244,9 +244,11 @@ const SemanaMakerPage = {
 
             </div>
             -->
+            <img src="images/15_done_.jpg" class="mb-3">
 
             <!-- Descrição -->
-            <p>Vem descobrir o fantástico mundo da eletrónica têxtil criando um bordado interativo de forma simples e divertida.</p>
+            <p>Vem descobrir o fantástico mundo da eletrónica têxtil criando um bordado luminoso de forma simples e divertida.</p>
+            <p>Após terminar a oficina, terás um bonito bordado que poderás usar como decoração ou oferecer a alguém querido.</p>
             <p>Nesta oficina irás aprender:
               <ul>
                 <li>Como costurar um bordado simples</li>
@@ -258,8 +260,8 @@ const SemanaMakerPage = {
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 10 anos</p>
             <p>Preço: 30€</p>
-            <p>Duração: 2h a 3h</p>
-            <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica Têxtil')">Inscrições disponíveis em breve</a>
+            <p>Duração: 2h30m</p>
+            <a href="https://forms.gle/fRJKbbTNEqi6sBgdA" target="_blank" class="btn btn-primary event-cta" @click="workshopEnrollment('Introdução à Eletrónica Têxtil')">Inscreve-te Já!</a>
 
           </div> <!-- end of event -->
         </div> <!-- end of .col -->
@@ -282,7 +284,7 @@ const SemanaMakerPage = {
             <p class="event-time fs-4 mb-2">10h - Espaço a definir</p>
 
             <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica e à Computação Física</h2>
+            <h2 class="event-title fw-bold mb-3">Introdução à Computação Física</h2>
 
             <!-- Vídeo de apresentação -->
             <!--
@@ -293,10 +295,9 @@ const SemanaMakerPage = {
             <img src="images/19I031_406_optimized.jpg" class="mb-3">
 
             <!-- Descrição -->
-            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida.</p>
+            <p>Descobre o mundo da computação física criando um conjunto de divertidos projetos que levam a programação ao mundo físico.</p>
             <p>Irás aprender:
               <ul>
-                <li>Como criar um circuito elétrico básico</li>
                 <li>Como programar um microcontrolador de forma visual, fácil e divertida</li>
                 <li>Como criar projetos de eletrónica com som, movimento, luzes, e muito mais</li>
               </ul>
@@ -309,8 +310,8 @@ const SemanaMakerPage = {
             <hr class="mt-0">
             <p>Inscrições limitadas (5 vagas).</p>
             <p>Público-alvo: Público em geral a partir dos 9 anos</p>
-            <p>Preço: 15€</p>
-            <p>Duração: 2h a 3h</p>
+            <p>Preço: 10€</p>
+            <p>Duração: 1h30m</p>
             <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
 
           </div> <!-- end of event -->
