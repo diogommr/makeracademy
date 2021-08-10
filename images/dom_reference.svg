@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.41 94.81">
+  <defs>
+    <style>
+      .e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <g id="b66f1ad0-1615-4bba-8ced-14af8e195046" data-name="Layer 2">
+    <g id="a1bdb287-0286-474b-8ff8-691ad4cf81e5" data-name="Layer 1">
+      <g>
+        <rect class="e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b" x="32.14" y="1" width="48.71" height="15.01" rx="3.25"/>
+        <rect class="e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b" x="1" y="47.66" width="48.71" height="15.01" rx="3.25"/>
+        <rect class="e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b" x="63.7" y="47.66" width="48.71" height="15.01" rx="3.25"/>
+        <rect class="e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b" x="63.7" y="78.81" width="48.71" height="15.01" rx="3.25"/>
+        <line class="e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b" x1="88.05" y1="62.67" x2="88.05" y2="78.81"/>
+        <polyline class="e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b" points="88.05 47.66 88.05 31.73 25.35 31.73 25.35 47.66"/>
+        <line class="e18f1e70-4e44-4b0f-beb4-39ce17cc1c8b" x1="56.7" y1="31.73" x2="56.7" y2="16.01"/>
+      </g>
+    </g>
+  </g>
+</svg>

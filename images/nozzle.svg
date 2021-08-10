@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 277.46 277.46">
+  <defs>
+    <style>
+      .a689e36a-4884-4d11-86d5-40a5273198ef, .a82dc315-f1c2-496d-88d1-7f909a1f73d9, .b8524cce-f8e7-484c-93de-5d81eb9e899e, .b936a837-ebaa-48b4-a6e9-47a7e8aee0aa, .edc29a99-cbe7-4867-b7cf-898a092718ba {
+        fill: none;
+      }
+
+      .a689e36a-4884-4d11-86d5-40a5273198ef, .a82dc315-f1c2-496d-88d1-7f909a1f73d9, .b8524cce-f8e7-484c-93de-5d81eb9e899e, .edc29a99-cbe7-4867-b7cf-898a092718ba {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .a82dc315-f1c2-496d-88d1-7f909a1f73d9 {
+        stroke-width: 2px;
+      }
+
+      .b8524cce-f8e7-484c-93de-5d81eb9e899e {
+        stroke-width: 2px;
+      }
+
+      .edc29a99-cbe7-4867-b7cf-898a092718ba {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="aad644a9-1e5c-42a0-b52d-febc1c53d814" data-name="Layer 2">
+    <g id="ef180c3e-8a80-4a94-8aa7-7a3b0f8acb7c" data-name="Layer 2">
+      <g>
+        <rect class="a689e36a-4884-4d11-86d5-40a5273198ef" x="73.43" y="115.27" width="130.6" height="46.92"/>
+        <polygon class="a82dc315-f1c2-496d-88d1-7f909a1f73d9" points="181.35 162.19 95.72 162.19 128.96 200.9 148.11 200.9 181.35 162.19"/>
+        <rect class="b8524cce-f8e7-484c-93de-5d81eb9e899e" x="91.81" y="59.35" width="93.45" height="55.92"/>
+        <rect class="b8524cce-f8e7-484c-93de-5d81eb9e899e" x="107.25" y="115.27" width="62.96" height="46.92"/>
+        <path class="edc29a99-cbe7-4867-b7cf-898a092718ba" d="M0,200.9H141a2.56,2.56,0,0,1,2.55,2.56v3.94a6.5,6.5,0,0,1-6.5,6.5H0"/>
+        <rect class="b936a837-ebaa-48b4-a6e9-47a7e8aee0aa" width="277.46" height="277.46"/>
+      </g>
+    </g>
+  </g>
+</svg>

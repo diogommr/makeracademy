@@ -10,351 +10,84 @@ const app = createApp({
   }
 });
 
-// Components
 app.component('navbar', {
+  methods: {
+    toggleMenu() {
+      let nav = document.getElementById('main-nav');
+      let menuBtn = document.getElementById('menu-btn');
+      console.log(menuBtn);
+      // nav open
+      if (nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        menuBtn.innerHTML = `
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        `;
+      } else {
+        nav.classList.add('open');
+        menuBtn.innerHTML = `
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        `;
+      }
+    }
+  },
   template: `
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">makeracademy.org</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/semanamaker">Semana Maker</a>
-            </li>
-          </ul>
+    <nav id="main-nav" class="">
+      <div id="nav-toggle-btn" @click="toggleMenu">
+        <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </div>
+      <div id="nav-content">
+        <span class="nav-section nav-left">
+          <router-link :to="{ name: 'home'}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+            </svg>
+            Home
+          </router-link>
+        </span>
+        <span class="nav-section nav-center">
+          <router-link :to="{ name: 'home', hash: '#discover'}">
+            Descobre
+          </router-link>
+          <router-link :to="{ name: 'home', hash: '#resources'}">
+            Recursos
+          </router-link>
+          <router-link :to="{ name: 'home', hash: '#about'}">
+            Sobre
+          </router-link>
+          <router-link :to="{ name: 'semanamaker'}">
+            Semana Maker
+          </router-link>
+        </span>
+
+        <span class="nav-section nav-right">
           <!--
-          <span class="navbar-text">
-            redes sociais
-          </span>
+          <a href="" target="_blank">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M14.82 2.41C18.78 2.41 22 5.65 22 9.62C22 13.58 18.78 16.8 14.82 16.8C10.85 16.8 7.61 13.58 7.61 9.62C7.61 5.65 10.85 2.41 14.82 2.41M2 21.6H5.5V2.41H2V21.6Z" />
+            </svg>
+          </a>
           -->
-        </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+            </svg>
+            PT
+          </div>
+        </span>
+
       </div>
     </nav>
   `
 });
-
-// Page Components
-const HomePage = {
-  data(){
-    return {
-      title: 'Maker Academy'
-    }
-  },
-  mounted() {
-    document.title = this.title;
-  },
-  template: `
-    <navbar></navbar>
-
-    <!-- Header -->
-    <!--
-    <header class="container-fluid hero">
-      <h1 class="text-center display-2 fw-bold">makeracademy</h1>
-      <p></p>
-    </header>
-    -->
-
-    <!-- Body -->
-    <main class="container-fluid">
-
-      <section id="section-mission" class="container-fluid">
-
-        <div className="container-md p-5 d-flex flex-column">
-
-          <h2 class="section-title text-center mb-5">Missão</h2>
-
-          <p>A makeracademy.org surge com um único propósito: Empoderar os Cidadãos.</p>
-          <p>O nosso objetivo é contribuir para a democratização do fazer, proporcionando os conhecimentos necessários para permitir a qualquer pessoa materializar as suas ideias criativas.</p>
-
-          <img src="images/closed_hands.svg" style="max-width: 300px;" class="m-auto mt-5" />
-
-        </div>        
-
-      </section>
-
-      <section id="section-services" class="container-fluid">
-
-        <div className="container-md p-5">
-
-          <div className="row gx-5 ">
-            <h2 class="section-title text-center mb-5">Serviços</h2>
-
-            <div class=" card-body col col-2">
-              <h3 class="card-title">Workshops</h3>
-              <p class="card-text">Dinamizamos atividades que visam equipar o público com habilidades maker nos âmbitos de eletrónica e computação física, literacia digital, <em>e-textiles</em>, criação multimédia, programação e muitos mais!</p>
-            </div>
-
-            <div class=" card-body col col-2">
-              <h3 class="card-title">Consultoria</h3>
-              <p class="card-text">Prestamos consultoria na implementação de soluções maker no posto de trabalho, em educação e a projetos pessoais.</p>
-            </div>
-
-          </div>
-          </div>
-
-      </section>
-      
-    </main> <!-- End of .container -->
-    
-    <footer class="container-fluid">
-      <div class="container-md p-5">
-        <p>© 2020 Todos os direitos reservados</p>
-      </div>
-    </footer>
-  `
-};
-
-const DevboardPage = {
-  template: `
-    <div id="devboard-page" class="resource-page">
-      <nav class="resource-page-nav">
-        <a href="/" class="back-btn"><span style="margin-top: -4px">☜</span></a>
-      </nav>
-      <iframe src="https://makeracademy-devboard.netlify.app/" class="resource-page-body"></iframe>
-    </div>
-  `    
-};
-
-const SemanaMakerPage = {
-  data() {
-    return {
-      title: 'Maker Academy | Semana Maker'
-    }
-  },
-  mounted() {
-    document.title = this.title;
-    gtag('config', 'G-1YHC69NMEF', {
-      'page_title': 'Semana Maker',
-      'page_path': '/semanamaker'
-    });
-  },
-  methods: {
-    workshopEnrollment(workshopName) {
-      gtag('event', 'workshop_enrollment', {
-        'event_label': workshopName,
-        'event_category': 'engagement',
-        'value': 1
-      });
-    }
-  },
-  template: `
-    <navbar></navbar>
-
-    <!-- Header -->
-    <header class="container-fluid">
-      <h1 class="text-center display-2 fw-bold">Semana Maker</h1>
-    </header>
-
-    <!-- Body -->
-    <main class="container-md pt-4">
-
-      <p>Na sequência do processo de criação de um espaço maker em Elvas, a makeracademy.org irá realizar um conjunto de atividades <a href="https://pt.wikipedia.org/wiki/Cultura_maker" target="_blank">maker</a> no sentido de informar a população sobre este movimento.</p>
-      <p>O programa ainda não está 100% fechado, por isso consulta esta página regularmente para estares a par das últimas novidades, ou segue-nos nas redes sociais!</p>
-
-      <p class="social-networks">
-        <a href="https://www.facebook.com/makeracademyorg-107133554941522" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1877F2" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/makeracademyorg/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width="32" alt="" />
-        </a>
-        <a href="https://twitter.com/makeracademyorg" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#29A4D9" class="bi bi-twitter" viewBox="0 0 16 16">
-            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-          </svg>
-        </a>
-      </p>
-
-      <h2 class="text-center m-5">Programa</h2>
-
-      <!-- Section -->
-      <section class="row header mb-5">
-
-        <div class="col col-md-4">
-          <div class="date">
-            <p class="fs-4 mb-0">23 de Agosto</p>
-            <p class="text-muted">segunda</p>
-          </div>
-        </div>
-
-        <div class="col col-md-8">
-          <div class="event card card-body event-workshop">
-            <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-1">10h - Casa Tangente</p>
-
-            <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica com Scrappy Circuits</h2>
-
-            <!-- Vídeo de apresentação -->
-            <!--
-            <div class="event-video">
-
-            </div>
-            -->
-            <img src="images/_MG_8295.jpg" class="mb-3">
-
-            <!-- Descrição -->
-            <p>Aprende a criar projetos de eletrónica de forma fácil e divertida com materiais muito acessíveis.</p>
-            <p>Esta oficina é para miúdos e graúdos, por isso encorajamos a todo aquele que se queira introduzir ao fantástico mundo da eletrónica a participar!</p>
-            <p>Irás aprender:
-              <ul>
-                <li>Como criar um circuito elétrico básico</li>
-                <li>Como criar e ler um esquema elétrico básico</li>
-                <li>Como ligar e usar componentes tais como LEDs, motores, botões e interruptores, e muitos mais</li>
-              </ul>
-            </p>
-            <hr class="mt-0">
-            <p>Inscrições limitadas (5 vagas).</p>
-            <p>Público-alvo: Público em geral a partir dos 9 anos.</p>
-            <p>Preço: 15€</p>
-            <p>Duração: 2h30m</p>
-            <a href="https://forms.gle/DdxEWrjLQWuNGX44A" target="_blank" class="btn btn-primary event-cta" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscreve-te Já!</a>
-
-          </div> <!-- end of event -->
-        </div> <!-- end of .col -->
-
-      </section>
-
-      <!-- Section -->
-      <section class="row header mb-5">
-
-        <div class="col col-md-4">
-          <div class="date">
-            <p class="fs-4 mb-0">24 de Agosto</p>
-            <p class="text-muted">terça</p>
-          </div>
-        </div>
-
-        <div class="col col-md-8">
-          <div class="event card card-body event-workshop">
-            <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-1">10h - Casa Tangente</p>
-
-            <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Eletrónica Têxtil (E-Textiles)</h2>
-
-            <!-- Vídeo de apresentação -->
-            <!--
-            <div class="event-video">
-
-            </div>
-            -->
-            <img src="images/15_done_.jpg" class="mb-3">
-
-            <!-- Descrição -->
-            <p>Vem descobrir o fantástico mundo da eletrónica têxtil criando um bordado luminoso de forma simples e divertida.</p>
-            <p>Após terminar a oficina, terás um bonito bordado que poderás usar como decoração ou oferecer a alguém querido.</p>
-            <p>Nesta oficina irás aprender:
-              <ul>
-                <li>Como costurar um bordado simples</li>
-                <li>Como fazer um circuito eletrónico básico</li>
-                <li>Como aplicar conhecimentos básicos de eletrónica na criação de uma peça têxtil interativa</li>
-              </ul>
-            </p>
-            <hr class="mt-0">
-            <p>Inscrições limitadas (5 vagas).</p>
-            <p>Público-alvo: Público em geral a partir dos 10 anos</p>
-            <p>Preço: 30€</p>
-            <p>Duração: 2h30m</p>
-            <a href="https://forms.gle/fRJKbbTNEqi6sBgdA" target="_blank" class="btn btn-primary event-cta" @click="workshopEnrollment('Introdução à Eletrónica Têxtil')">Inscreve-te Já!</a>
-
-          </div> <!-- end of event -->
-        </div> <!-- end of .col -->
-
-      </section>
-
-      <!-- Section -->
-      <section class="row header mb-5 ">
-
-        <div class="col col-md-4">
-          <div class="date">
-            <p class="fs-4 mb-0">25 de Agosto</p>
-            <p class="text-muted">quarta</p>
-          </div>
-        </div>
-
-        <div class="col col-md-8">
-          <div class="event card card-body event-workshop">
-            <!-- Hora e Local -->
-            <p class="event-time fs-4 mb-2">10h - Espaço a definir</p>
-
-            <!-- Título do evento -->
-            <h2 class="event-title fw-bold mb-3">Introdução à Computação Física</h2>
-
-            <!-- Vídeo de apresentação -->
-            <!--
-            <div class="event-video">
-
-            </div>
-            -->
-            <img src="images/19I031_406_optimized.jpg" class="mb-3">
-
-            <!-- Descrição -->
-            <p>Descobre o mundo da computação física criando um conjunto de divertidos projetos que levam a programação ao mundo físico.</p>
-            <p>Irás aprender:
-              <ul>
-                <li>Como programar um microcontrolador de forma visual, fácil e divertida</li>
-                <li>Como criar projetos de eletrónica com som, movimento, luzes, e muito mais</li>
-              </ul>
-            </p>
-            <p>Deverás trazer:
-              <ul>
-                <li>Computador Portátil</li>
-              </ul>
-            </p>
-            <hr class="mt-0">
-            <p>Inscrições limitadas (5 vagas).</p>
-            <p>Público-alvo: Público em geral a partir dos 9 anos</p>
-            <p>Preço: 10€</p>
-            <p>Duração: 1h30m</p>
-            <a href="#" target="_blank" class="btn btn-primary event-cta disabled" @click="workshopEnrollment('Introdução à Eletrónica e à Computação Física')">Inscrições disponíveis em breve</a>
-
-          </div> <!-- end of event -->
-        </div> <!-- end of .col -->
-
-      </section>
-
-      <!-- Section -->
-      <!--
-      <section class="row header mb-5">
-
-        <div class="col col-md-4">
-          <div class="date">
-            <p class="fs-4 mb-0">28 de Agosto</p>
-            <p class="text-muted">sábado</p>
-          </div>
-        </div>
-
-        <div class="col col-md-8">
-          <div class="event card card-body event-exhibition">
-
-            <p class="event-time fs-4 mb-1">10h-12:30h, 15h-19h - Tv. da Alcáçova nº1</p>
-
-            <h2 class="event-title fw-bold mb-3">Mostra de Trabalhos</h2>
-
-            <p>Exposição das peças criadas nas oficinas durante a Semana Maker.</p>
-
-          </div> 
-        </div> 
-
-      </section>
-      -->
-      
-    </main> <!-- End of .container -->
-    
-    <footer class="container-fluid">
-      <div class="container-md p-5">
-        <p>© 2020 Todos os direitos reservados</p>
-      </div>
-    </footer>
-  `
-};
-
 
 // Routing
 const router = VueRouter.createRouter({
@@ -362,10 +95,20 @@ const router = VueRouter.createRouter({
   // history: VueRouter.createWebHashHistory(),
   history: VueRouter.createWebHistory(),
   routes: [
-    { path: '/', component: HomePage },
-    { path: '/semanamaker', component: SemanaMakerPage },
-  ]
+    { path: '/', component: HomePage, name: 'home' },
+    { path: '/semanamaker', component: SemanaMakerPage, name: 'semanamaker' },
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+    return savedPosition || {top:0};
+  }
 })
+
 
 
 
