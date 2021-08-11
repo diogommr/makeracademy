@@ -184,7 +184,7 @@ em {
 #home-header {
   background: url(images/header_bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center 90%;
 }
 
 #home-header::after {
@@ -195,7 +195,7 @@ em {
   top: 0;
   left: 0;
   object-fit: cover;
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .5);
 }
 
 .header-title {
@@ -209,6 +209,11 @@ em {
   text-align: center;
   font-size: 26px;
   z-index: 1;
+}
+
+#home-header .header-title,
+#home-header .header-subtitle {
+  text-shadow: 0 0 5px white;
 }
 
 
