@@ -90,6 +90,7 @@ em {
   right: 0;
   z-index: 21;
   pointer-events: all;
+  box-shadow: var(--standard-shadow);
 }
 
 #nav-content {
@@ -115,6 +116,10 @@ em {
 
 .nav-section > * {
   margin-bottom: 10px;
+}
+
+.nav-icon {
+  margin-right: 5px;
 }
 
 /* Desktop */
