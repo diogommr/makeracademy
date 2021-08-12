@@ -147,7 +147,7 @@ const SemanaMakerPage = {
                     <p class="event-text">Público-alvo: Público em geral a partir dos 9 anos.</p>
                     <p class="event-text">Preço: 10€</p>
                     <p class="event-text">Duração: 2h</p>
-                    <a href="" target="_blank" class="section-cta disabled">Disponível Brevemente!</a>
+                    <a href="https://forms.gle/8aHKiTJ7ivU4nAb96" target="_blank" class="section-cta">Inscreve-te Já!</a>
                   </div>
 
                 </div>
