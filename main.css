@@ -182,7 +182,7 @@ em {
 }
 
 #home-header {
-  background: url(images/header_bg.jpg);
+  background: url(images/header_bg_compressed.jpg);
   background-size: cover;
   background-position: center 90%;
 }
