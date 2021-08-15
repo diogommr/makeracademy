@@ -155,6 +155,12 @@ const SemanaMakerPage = {
               </div>
             </div>
           </section>
+          <section class="body-section">
+            <div class="section-content">
+              <h2 class="section-title">Onde fica a Casa Tangente?</h2>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d959.4488765039536!2d-7.163317470751887!3d38.88226904268952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd171c68ad183297%3A0x92a10039e6f17101!2sR.%20de%20Martim%20Mendes%2011%2C%207350-082%20Elvas!5e1!3m2!1sen!2spt!4v1629071214708!5m2!1sen!2spt" id="g-maps" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </section>
 
         </main> <!-- End of .body -->
 
