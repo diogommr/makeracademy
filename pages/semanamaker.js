@@ -161,6 +161,13 @@ const SemanaMakerPage = {
             </div>
           </section>
 
+          <section class="body-section">
+            <div class="section-content">
+              <h2 class="section-title">Em colaboração com</h2>
+              <img src="images/logo_coletivo.jpg">
+            </div>
+          </section>
+
         </main> <!-- End of .body -->
 
         <footer>

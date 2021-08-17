@@ -92,11 +92,11 @@ app.component('navbar', {
 // Routing
 const router = VueRouter.createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  // history: VueRouter.createWebHashHistory(),
-  history: VueRouter.createWebHistory(),
+  history: VueRouter.createWebHashHistory(),
+  // history: VueRouter.createWebHistory(),
   routes: [
     { path: '/', component: HomePage, name: 'home' },
-    { path: '/semanamaker', component: SemanaMakerPage, name: 'semanamaker' },
+    { path: '/#/semanamaker', component: SemanaMakerPage, name: 'semanamaker' },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
