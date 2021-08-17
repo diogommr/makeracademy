@@ -89,7 +89,6 @@ const SemanaMakerPage = {
                     <hr>
                     <p class="event-text">Inscrições limitadas (5 vagas).</p>
                     <p class="event-text">Público-alvo: Público em geral a partir dos 9 anos.</p>
-                    <p class="event-text">Preço: 10€</p>
                     <p class="event-text">Duração: 2h</p>
                     <a href="https://forms.gle/DdxEWrjLQWuNGX44A" target="_blank" class="section-cta">Inscreve-te Já!</a>
                   </div>
@@ -118,7 +117,6 @@ const SemanaMakerPage = {
                     <hr>
                     <p class="event-text">Inscrições limitadas (5 vagas).</p>
                     <p class="event-text">Público-alvo: Público em geral a partir dos 12 anos.</p>
-                    <p class="event-text">Preço: 25€</p>
                     <p class="event-text">Duração: 2h</p>
                     <a href="https://forms.gle/fRJKbbTNEqi6sBgdA" target="_blank" class="section-cta">Inscreve-te Já!</a>
                   </div>
@@ -145,7 +143,6 @@ const SemanaMakerPage = {
                     <hr>
                     <p class="event-text">Inscrições limitadas (5 vagas).</p>
                     <p class="event-text">Público-alvo: Público em geral a partir dos 9 anos.</p>
-                    <p class="event-text">Preço: 10€</p>
                     <p class="event-text">Duração: 2h</p>
                     <a href="https://forms.gle/8aHKiTJ7ivU4nAb96" target="_blank" class="section-cta">Inscreve-te Já!</a>
                   </div>
