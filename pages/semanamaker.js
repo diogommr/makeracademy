@@ -45,6 +45,8 @@ const SemanaMakerPage = {
             <div class="section-content">
               <!--<h2 class="section-title">O que é?</h2>-->
               <p class="section-text">A Semana Maker é uma semana dedicada a introduzir a população ao movimento maker através da realização de um conjunto de atividades maker que visam expandir o horizonte dos participantes.</p>
+              <p class="section-text">Vem participar nas oficinas e aprende habilidades que te ajudarão a materializar as tuas ideias criativas.</p>
+              <p class="section-text">Traz um amigo! Cada oficina está pensada para poder ser feita a pares ou em família.</p>
               <p class="section-text">Consulta o programa abaixo ou segue-nos nas redes sociais para estares a par das últimas novidades!</p>
               <span class="social-media-container">
                 <a href="https://www.facebook.com/makeracademyorg-107133554941522/" target="_blank">
