@@ -146,6 +146,7 @@ const SemanaMakerPage = {
                     <p class="event-text">Inscrições limitadas (5 vagas).</p>
                     <p class="event-text">Público-alvo: Público em geral a partir dos 9 anos.</p>
                     <p class="event-text">Duração: 2h</p>
+                    <p class="event-text">Requisitos: <strong>Deverás trazer computador portátil.</strong></p>
                     <a href="https://forms.gle/8aHKiTJ7ivU4nAb96" target="_blank" class="section-cta">Inscreve-te Já!</a>
                   </div>
 
