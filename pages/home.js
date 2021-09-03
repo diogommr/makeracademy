@@ -55,24 +55,15 @@ const HomePage = {
             <div class="section-content">
               <h2 class="section-title">Recursos</h2>
               <p class="section-text">Os recursos interativos da Maker Academy ajudam-te a poupar tempo e a focar-te nos aspetos criativos dos projetos em vez de nos aspetos técnicos.</p>
-              <div id="resources-image">
-                <div class="square">
-                  <img src="images/devboards_graphic.svg">
-                </div>
-                <div class="square">
-                  <img src="images/dom_reference.svg">
-                </div>
-                <div class="square">
-                  <img src="images/languages_reference.svg">
-                </div>
-                <div class="square">
-                  <img src="images/cards.svg">
-                </div>
-                <div class="square">
-                  <img src="images/nozzle.svg">
-                </div>
+              <div id="resources-cont">
+                <router-link :to="{ name: 'devboards'}" class="resource section-cta">
+                  <img src="images/devboards_graphic.svg" class="resource-img">
+                  <div>
+                    <p class="resource-type">referencia</p>
+                    <h3 class="resource-title">DevBoards</h3>
+                  </div>
+                </router-link>
               </div>
-              <a href="" class="section-cta disabled">Explorar Recursos</a>
             </div>
           </section>
 
