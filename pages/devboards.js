@@ -1,7 +1,7 @@
 const DevboardsPage = {
   data() {
     return {
-      title: 'Semana Maker | Maker Academy'
+      title: 'DevBoards | Maker Academy'
     }
   },
   mounted() {
