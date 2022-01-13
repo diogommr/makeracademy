@@ -4,28 +4,28 @@
 			"path": "main.css",
 			"bookmarks": [
 				{
-					"line": 26,
-					"column": 21,
+					"line": 70,
+					"column": 6,
 					"label": ""
 				},
 				{
-					"line": 92,
+					"line": 95,
+					"column": 5,
+					"label": ""
+				},
+				{
+					"line": 128,
 					"column": 23,
 					"label": ""
 				},
 				{
-					"line": 117,
+					"line": 157,
 					"column": 9,
 					"label": ""
 				},
 				{
-					"line": 196,
-					"column": 8,
-					"label": ""
-				},
-				{
-					"line": 248,
-					"column": 16,
+					"line": 791,
+					"column": 17,
 					"label": ""
 				}
 			]
