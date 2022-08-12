@@ -304,6 +304,7 @@ iframe {
   .nav-right {
     display: flex;
     justify-content: flex-end;
+    display: none;
   }
   .nav-right > * {
     /* background: tomato; */
@@ -732,6 +733,7 @@ nav .icon {
 
 #support {
   background: var(--pastel-pink);
+  display: none;
 }
 
 
