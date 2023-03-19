@@ -1,5 +1,0 @@
-[[redirects]]
-    from = "/*"
-    to = "https://www.themakersroom.org"
-    status = 301
-    force = true
